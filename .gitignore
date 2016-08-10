@@ -132,3 +132,7 @@ sponge-theme/
 
 # Source code created by pip
 src/
+
+# other
+.vscode/
+
