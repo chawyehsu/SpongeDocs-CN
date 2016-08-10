@@ -93,7 +93,7 @@ Sponge 开发
 
 SpongePowered 团队非常感谢 *YourKit* 向开源项目免费提供了其完整功能的 Java Profiler 工具。
 YourKit 公司是创新智能的 Java / .NET 应用分析工具 `YourKit Java Profiler <https://www.yourkit.com/java/profiler/index.jsp>`__
-与 `YourKit .NET Profiler <https://www.yourkit.com/.net/profiler/index.jsp>`__ 的创造者。
+与 `YourKit .NET Profiler <https://www.yourkit.com/.net/profiler/index.jsp>`__ 的缔造者。
 
 
 
@@ -108,7 +108,7 @@ YourKit 公司是创新智能的 Java / .NET 应用分析工具 `YourKit Java P
 -  `Sponge 论坛 <http://forums.spongepowered.org>`__
 -  `SpongeAPI Issue Tracker <https://github.com/SpongePowered/SpongeAPI/issues?q=>`__
 -  `SpongeAPI Javadocs <https://jd.spongepowered.org>`__
--  `Sponge 推特 <https://twitter.com/SpongePowered>`__
+-  `Sponge Twitter <https://twitter.com/SpongePowered>`__
 -  `Sponge Subreddit <https://reddit.com/r/SpongeProject>`__
 -  `Sponge GitHub <https://github.com/SpongePowered>`__
 -  `Sponge Patreon 捐赠页 <https://www.patreon.com/Sponge?ty=h>`__

@@ -1,53 +1,45 @@
 ============
-Introduction
+项目介绍
 ============
 
-What Is Sponge?
+Sponge 是什么？
 ~~~~~~~~~~~~~~~
 
-The purpose of the Sponge project is to create a plugin development framework for Minecraft. Sponge is being created by
-a global community, and its open-source nature means anyone can participate.
+Sponge 项目的目的是建立一个 Minecraft 的插件开发环境。Sponge 是在全球性的社区中诞生的，它的开源自然也意味着任何人都可以参与其中。
 
-Sponge was created after seeing the failures of other projects in the Minecraft plugin development community. We are
-trying to avoid making the same mistakes as other projects; thus:
+在目睹 Minecraft 插件开发社区中其它项目的失败后，Sponge 诞生了。我们试图避免犯下那些失败项目的错误，因此：
 
-* Sponge is an extremely open project.
-* Sponge is licensed under the MIT license - an extremely permissive open source license.
-* Performance is of high priority.
+* Sponge 是完全开源的。
+* Sponge 基于 MIT 授权许可 —— 一个极其开放的开源许可。
+* 性能是高优先考虑的。
 
-Most plugins developed with the Sponge API should work across several different versions of Minecraft without needing
-to be updated. This means that, for the most part, server owners do not need to worry about plugin incompatibilities.
+大多数基于 Sponge API 开发的插件可以不加修改地在数个不同版本的 Minecraft 中运行工作。这意味着，服主们几乎不再需要担心插件的不兼容性。
 
-We have two other projects in addition to the Sponge API:
+除了 Sponge API 外我们还拥有另外两个项目：
 
-(1) **SpongeForge**, a coremod for Minecraft Forge, which is an existing Minecraft modding framework famous for spurring
-    the Minecraft modding scene. Forge lacks a cross-version API, and this is where Sponge steps in. Sponge allows
-    server owners to deploy Sponge plugins with ease, making server management easier.
+(1) **SpongeForge**，这是一个 Minecraft Forge 的核心模组，Minecraft Forge 是一个著名的 Minecraft 模组化框架，是目前 Minecraft
+    模组界的主导。但 Forge 缺少跨版本的 API，而这则是 Sponge 要做的。Sponge 能让服主们更轻松简单地部署插件和管理服务器。
 
-(2) **SpongeVanilla**, a stand-alone implementation of the Sponge API, running on top of the vanilla Minecraft server.
-    (SpongeVanilla was formerly known as Granite, until the development teams merged).
+(2) **SpongeVanilla**，一个运行于原版 Minecraft 服务器上的 Sponge API 独立实现。（SpongeVanilla 的前身是 Granite，后面开发团队合并了）
 
-Players on servers running SpongeForge or SpongeVanilla do not need to install any client-side mods. They are able to join
-servers running Sponge using the vanilla Minecraft client provided by Mojang.
+在 SpongeForge 或 SpongeVanilla 服务器中的玩家无需安装任何的客户端模组。玩家使用 Mojang 提供的原版 Minecraft 客户端即可登录到
+Sponge 服务器。
 
-The Sponge API is not tied to any platform. This means that server owners can run Sponge plugins on any official
-implementation of the Sponge API. Sponge plugins should function identically on either implementation, due to the
-common functionality of mixins.
+Sponge API 不限定于具体的平台。也就是说服主们可以在任何一个 Sponge API 的官方实现中运行 Sponge 插件。根据 Sponge
+的通用功能 mixins，在 2 种不同的官方实现下 Sponge 插件的功能是一致的。
 
-Where Can I Download Sponge?
+从哪里可以下载 Sponge？
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Neither SpongeForge nor SpongeVanilla is ready yet but development builds can be found at :doc:`/downloads`.
+SpongeForge 和 SpongeVanilla 都仍在开发阶段，开发版可以在 :doc:`/downloads` 页面获取。
 
-Who Is behind Sponge?
+Sponge 的幕后
 ~~~~~~~~~~~~~~~~~~~~~
 
-The project leaders are blood, gabizou and Zidane. We are trying to be very open with the team to ensure the project leaders
-do not end up “holding all of the keys.” Nonetheless, these three people make the final decisions to ensure the efficient
-operation of the project.
+这个项目目前由 blood，gabizou 以及 Zidane 主导。我们力图使整个团队开放起来，以确保项目主导者不会最终“紧握所有权利”。尽管如此，
+这三位主导者拥有最终决定权，以保证项目的高效运作。
 
-A full list of staff members is located at :doc:`staff`.
+完整的工作人员列表请查看 :doc:`staff`。
 
-Our developers are well-versed with Java, and many of them have worked with Minecraft for years and know the ins-and-outs
-of its mechanics. There are tons of very good developers working on the Sponge project, and it would be nearly impossible
-to list all of them!
+我们的开发者都精通 Java，并且他们中的许多人已有多年的 Minecraft 开发经验，熟悉其机制的来龙去脉。有太多优秀开发者参与到 Sponge
+项目中了，所以我们不能够一一列出它们的名字！
