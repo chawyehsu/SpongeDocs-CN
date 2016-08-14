@@ -1,53 +1,48 @@
 ===================================
-The Structure of the Sponge Project
+Sponge 项目的架构
 ===================================
 
-The Sponge Project consists of different subprojects, hosted in various repositories on Github. Here's a short overview
-before going into detail:
+Sponge 项目包含几个不同的子项目，分别托管在 GitHub 不同的仓库中。在深入到细节之前以下先作简短概述：
 
 +-------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
-| Project                                                           | Description                                           | What is done in the repository?                                                 |
+| 项目                                                              | 描述                                                  | 仓库中会做什么？                                                                |
 +===================================================================+=======================================================+=================================================================================+
-| `SpongeAPI <https://github.com/Spongepowered/SpongeAPI>`_         | The API itself                                        | Development of the API itself                                                   |
+| `SpongeAPI <https://github.com/Spongepowered/SpongeAPI>`_         | API 本身                                              | API 本身的开发工作                                                              |
 +-------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
-| `SpongeForge <https://github.com/Spongepowered/SpongeForge>`_     | A SpongeAPI implementation built on top of Forge      | Development of the parts of SpongeForge which rely on Forge                     |
+| `SpongeForge <https://github.com/Spongepowered/SpongeForge>`_     | 一个基于 Forge 的 SpongeAPI 实现                      | 基于 Forge 进行 SpongeForge 的开发工作                                          |
 +-------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
-| `SpongeVanilla <https://github.com/Spongepowered/SpongeVanilla>`_ | A SpongeAPI implementation built directly on top      | Development of the Vanilla Counterpart of the SpongeForge repository            |
-|                                                                   | of Vanilla Minecraft                                  |                                                                                 |
+| `SpongeVanilla <https://github.com/Spongepowered/SpongeVanilla>`_ | 一个直接基于原版 Minecraft 的 SpongeAPI 实现          | 与 SpongeForge 仓库相对的原版实现开发工作                                       |
 +-------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
-| `SpongeCommon <https://github.com/Spongepowered/SpongeCommon>`_   | The shared code between SpongeForge and SpongeVanilla | Development of all code which is shared between SpongeForge and SpongeVanilla   |
+| `SpongeCommon <https://github.com/Spongepowered/SpongeCommon>`_   | SpongeForge 与 SpongeVanilla 的共享代码               | SpongeForge 与 SpongeVanilla 所有共享代码的开发工作                             |
 +-------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
-| `Mixin <https://github.com/Spongepowered/Mixin>`_                 | The tool used to inject the implementations into      | Development of our solution to hook Sponge into the Minecraft server            |
-|                                                                   | the underlying code structure                         |                                                                                 |
+| `Mixin <https://github.com/Spongepowered/Mixin>`_                 | 向底层代码架构中注入实现用到的工具                    | 在 Minecraft 服务器中 hook Sponge 的解决方案的开发工作                          |
 +-------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
-| `SpongeDocs <https://github.com/Spongepowered/SpongeDocs>`_       | The official SpongeProject Documentation              | Expanding, fixing and writing the SpongeDocs                                    |
+| `SpongeDocs <https://github.com/Spongepowered/SpongeDocs>`_       | Sponge 项目官方文档                                   | 扩展，修复与编写 SpongeDocs                                                     |
 +-------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
-| `Ore <https://github.com/Spongepowered/Ore>`_                     | Plugin hosting solution                               | Development of our plugin hosting solution                                      |
+| `Ore <https://github.com/Spongepowered/Ore>`_                     | 插件托管解决方案                                      | 插件解决方案的开发工作                                                          |
 +-------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
 
-SpongeCommon, SpongeForge and SpongeVanilla
+SpongeCommon，SpongeForge 与 SpongeVanilla
 ===========================================
 
-The SpongeCommon repository is the base which contains all code which is shared between the SpongeForge and SpongeVanilla
-implementation. The SpongeForge and SpongeVanilla repositories contain all code which can't be shared between them, as
-Forge requires some Forge specific things which won't work on Vanilla and vice versa.
+SpongeCommon 仓库是基础，包含了 SpongeForge 与 SpongeVanilla 实现共享的所有代码。
+SpongeForge 与 SpongeVanilla 仓库分别包含了所有彼此不能共享的代码，Forge 需要一些原版不需要的 Forge 指定文件，反之亦然。
 
-When you refer to the SpongeForge implementation, you're basically talking about everything contained in the
-SpongeCommon and SpongeForge repositories. The same applies for SpongeVanilla and SpongeCommon. This is the reason why
-building SpongeForge or SpongeVanilla from the repository *without* including SpongeCommon won't work.
+当你提及 SpongeForge 实现时，基本上讨论的是 SpongeCommon 与 SpongeForge 仓库中的东西。同样的 SpongeVanilla 与 SpongeCommon。
+这就是为什么从仓库中构建 SpongeForge 或者 SpongeVanilla 时如果 *没有* 导入 SpongeCommon 将不会工作的原因。
 
 Ore
 ===
 
-Ore is our very own plugin hosting solution. It's written in Python, based on Django and of course open-source!
+Ore 是我们自有的插件托管解决方案。基于 Django 使用 Python 编写，当然是开源的！
 
-How everything is tied together
+这一切是如何联系在一起的
 ===============================
 
-The image shows the various parts of the Sponge Implementations and how they interact with each other and their dependencies.
-On the left side is a typical SpongeForge setup with some SpongeAPI plugins, a Forge mod and a hybrid which uses Forge
-(as a mod) and Sponge (as a plugin) to interact. On the right side there's a typical SpongeVanilla setup. You'll notice
-that SpongeVanilla doesn't support Forge mods or the hybrid, because SpongeVanilla is missing the Forge functionality:
+下面这张图展示了 Sponge 的各个部分以及它们是如何相互交互相互依赖的。在左边是一个典型的 SpongeForge 结构，
+有一些 SpongeAPI 插件，有一个 Forge 模组以及还有一个同时使用了 Forge（作为一个模组）与
+Sponge（作为一个插件）进行交互的混合体。而右边则是一个典型的 SpongeVanilla 结构。
+你需要注意 SpongeVanilla 不支持 Forge 模组或混合体，因为 SpongeVanilla 缺少了 Forge 的功能：
 
 .. image:: /images/contributing/SpongeProject-structure.svg
     :alt: Repo Overview
