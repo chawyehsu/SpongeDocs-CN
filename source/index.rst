@@ -10,13 +10,13 @@ Sponge 开发文档
 SpongeAPI 是一个全新的 Minecraft 插件 API。你可以在原版服务器（即 SpongeVanilla）或者 MinecraftForge 模组化的服务器
 （即 SpongeForge）上运行 SpongeAPI。相关下载请见 :doc:`这里 <downloads>`。
 
-如果你不知从何下手，不妨先阅读我们的 :doc:`about/index` 章节，其包含一个简短的 :doc:`about/introduction`，:doc:`about/faq` 
+如果你不知从何下手，不妨先阅读我们的 :doc:`about/index` 章节，其包含一个简短的 :doc:`about/introduction`，:doc:`about/faq` 
 以及一篇关于 :doc:`about/structure` 的文章。 
 
 服主则应该阅读我们的 :doc:`server/index` 章节，从中了解一些关于如何安装、运行和维护 Sponge 服务器的提示与说明。
 
 
-Sponge 项目目前有几个主要的组成部分，想了解更多可阅读 :doc:`这里 <about/structure>` 或者查看它们各自的 GitHub 仓库：
+Sponge 项目目前有几个主要的组成部分，想了解更多可阅读 :doc:`这里 <about/structure>` 或者查看它们各自的 GitHub 仓库：
 `SpongeForge <https://github.com/spongepowered/spongeforge>`_ |
 `SpongeVanilla <https://github.com/spongepowered/spongevanilla>`_ | `SpongeAPI <https://github.com/spongepowered/spongeapi>`_ |
 `SpongeDocs <https://github.com/spongepowered/spongedocs>`_ | `Mixin <https://github.com/SpongePowered/Mixin>`_ |
@@ -66,7 +66,7 @@ Sponge 项目目前有几个主要的组成部分，想了解更多可阅读 :d
 Sponge 开发
 ~~~~~~~~~~~~~~~~~~~~~~
 
-如果你想帮助 Sponge 社区，请阅读本章节。让 Sponge 变得更好吧！
+如果你想帮助 Sponge 社区，请阅读本章节。让 Sponge 变得更好吧！
 
 .. toctree::
     :maxdepth: 2
@@ -92,7 +92,7 @@ Sponge 开发
 .. image:: /images/yklogo.png
 
 SpongePowered 团队非常感谢 *YourKit* 向开源项目免费提供了其完整功能的 Java Profiler 工具。
-YourKit 公司是创新智能的 Java / .NET 应用分析工具 `YourKit Java Profiler <https://www.yourkit.com/java/profiler/index.jsp>`__
+YourKit 公司是创新智能的 Java / .NET 应用分析工具 `YourKit Java Profiler <https://www.yourkit.com/java/profiler/index.jsp>`__
 与 `YourKit .NET Profiler <https://www.yourkit.com/.net/profiler/index.jsp>`__ 的缔造者。
 
 

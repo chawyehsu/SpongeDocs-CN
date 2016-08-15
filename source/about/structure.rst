@@ -26,7 +26,7 @@ SpongeCommon，SpongeForge 与 SpongeVanilla
 ===========================================
 
 SpongeCommon 仓库是基础，包含了 SpongeForge 与 SpongeVanilla 实现共享的所有代码。
-SpongeForge 与 SpongeVanilla 仓库分别包含了所有彼此不能共享的代码，Forge 需要一些原版不需要的 Forge 指定文件，反之亦然。
+SpongeForge 与 SpongeVanilla 仓库分别包含了所有彼此不能共享的代码，Forge 需要一些原版不需要的 Forge 指定文件，反之亦然。
 
 当你提及 SpongeForge 实现时，基本上讨论的是 SpongeCommon 与 SpongeForge 仓库中的东西。同样的 SpongeVanilla 与 SpongeCommon。
 这就是为什么从仓库中构建 SpongeForge 或者 SpongeVanilla 时如果 *没有* 导入 SpongeCommon 将不会工作的原因。
