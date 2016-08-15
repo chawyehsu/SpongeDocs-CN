@@ -1,27 +1,25 @@
 ==========
-Art Assets
+艺术资源
 ==========
-
-This page provides the official SpongePowered logo and mascot. Feel free to use them to spread the word about Sponge.
-However note that these images are **not** provided under the MIT License.
+本页提供了 SpongePowered 的官方标志和吉祥物。可以尽情地使用它们来宣传 
+Sponge。不过请注意这些图片 **不是** 在 MIT 许可协议下的。
 
 .. note::
-  If you're reading a translated version, please note that the English license is the one which counts. Translated
-  licenses are only provided for informational purposes.
+  如果你正在阅读的是译文版本，请注意英文版的许可协议才算数的。译文版许可协议仅供参考之用。
 
-You may:
+你可以：
 
-* Make minor modifications to Spongie’s facial expressions - such as making a cute smile,
-  making them perplexed or sad, adding a hat, and so on. It should be easily recognizable that the Spongie you create
-  is the Spongie mascot, but wearing a different expression or clothing.
+* 修改 Spongie 的面部细节 —— 比如一个可爱的笑容，让她看上去满脸困惑或者伤感，甚至是加一顶帽子等等。修改过的
+  Spongie 应当能够被容易地辨别出她是 Sponge 的吉祥物，只是有着不同的衣着或感情。
 
-* Use Spongie or the SpongePowered logo in an article or blog post about the Sponge project, and to spread the word.
+* 在与 Sponge 项目相关的文章或博客中使用 Spongie 或 SpongePowered 的标志进行宣传。
 
-* Use the Spongepowered Logo to link to `Sponge Homepage <http://spongepowered.org>`__
-  (for example in your signature on forums etc.)
+* 使用 SpongePowered 标志链接到 `Sponge 的主页 <http://spongepowered.org>`__
+  （比如在你的论坛的签名中等等）
 
-You may not:
+你不可以：
 
+* 仅使用吉祥物作为 Sponge 项目的链接。
 * Use the mascot as a link to the Sponge project only. The SpongePowered logo (which retains Spongie’s form) is a better
   representation of the Sponge project when used as an affiliate or reference.
 
