@@ -11,10 +11,10 @@
 SpongeForge
 ~~~~~~~~~~~
 
-* **状态：** Beta 测试版。
+* **状态：** Beta 测试。
 
 * SpongeForge 的第一个 alpha 构建（#428, Inspired Wallaroo）于 2015 年 4 月 25 日发布。
-* SpongeForge 的第一个 beta 构建（#1000）与 2015 年 12 月 31 日发布。
+* SpongeForge 的第一个 beta 构建（#1000）于 2015 年 12 月 31 日发布。
 
 *SpongeForge 的前身为 Sponge*
 
@@ -26,7 +26,7 @@ SpongeForge
 SpongeVanilla
 ~~~~~~~~~~~~~
 
-* **状态：** Alpha 测试版。SpongeVanilla 的第一个 alpha 构建（DEV#17）于 2015 年 9 月 13 日发布。
+* **状态：** Alpha 测试。SpongeVanilla 的第一个 alpha 构建（DEV#17）于 2015 年 9 月 13 日发布。
 
 
 `SpongeVanilla 的 alpha 开发构建在这里提供！ <https://repo.spongepowered.org/maven/org/spongepowered/spongevanilla/>`__
