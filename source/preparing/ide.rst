@@ -12,11 +12,12 @@ IDE 是什么？
 我应该选择哪一个 IDE？
 ==========================
 
-Every IDE has its pros and cons, and there is no single best IDE for Sponge development. The IDE you choose to use is
-largely a matter of personal preference. That being said, it is worth mentioning that `IntelliJ IDEA Community Edition
-<https://www.jetbrains.com/idea/download>`__ is fairly popular amongst a majority of the core Sponge team.
+不同的 IDE 各有优劣，对于 Sponge 开发没有哪一个 IDE 是最好的。选择哪一个 IDE
+很大程度上取决于个人偏好。话虽如此，值得一提的是 `IntelliJ IDEA Community Edition
+<https://www.jetbrains.com/idea/download>`__
+在 Sponge 核心团队的大部分开发者中相当地受欢迎。
 
-Downloads
+下载
 =========
 
 * `IntelliJ IDEA <https://www.jetbrains.com/idea/download/>`__
