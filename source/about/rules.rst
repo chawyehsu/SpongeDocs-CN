@@ -1,73 +1,59 @@
 =================
-Forum & IRC Rules
+论坛及 IRC 规则
 =================
 
-Welcome to the Sponge Project! We're glad you're here and interested in Sponge. We have a few rules that apply to all
-of our various methods of communications, including (but not limited to):
+欢迎访问 Sponge 项目！很高兴你对 Sponge 感兴趣。我们有一些规则，适用于所有我们的交流工具，包括（但不限于）：
 
-* Official IRC channels: #sponge, #spongedev, #spongedocs
-* Sponge Forums
-* Github and Bug/Issue tracker
+* 官方 IRC 频道：#sponge, #spongedev, #spongedocs
+* Sponge 论坛
+* GitHub 与 BUG / 问题追踪系统
 * Sponge subReddit
-* Sponge TeamSpeak Server
-* Any other official means of communication by the Sponge project.
+* Sponge TeamSpeak 服务器
+* Sponge 项目的其它官方交流工具
 
-The Sponge project adheres primarily to Wheaton's Law: "Don't be a dick." We expect everyone using our communication
-systems to act like a reasonable and responsible person, showing respect for other users and staff.
+Sponge 项目遵循着惠顿定律：“Don't be a dick.”。我们希望每个使用我们的交流工具的人都能理性，负责任，并尊重其他用户及工作人员。
 
-Read on for some more specific guidance, but please remember these rules are meant to be general, not a comprehensive
-list of do's and don'ts. This stuff should all be common sense.
+请继续阅读以下指引，但是请明确这些只是基本的规则，不是该做和不该做的详尽陈列。这些东西都应该是常识。
 
-* Follow Support Guidelines (when they exist) for any issues you may have.
+* 遇到任何问题，请先遵循支持指引（如果有）。
 
-* Don't abuse the channel (IRC, Forum, etc). This means don't spam, multipost, crosspost, or flood it. Be nice and
-  remember that we're all sharing the same virtual space.
+* 不要滥用频道（IRC，论坛等）。换言之不要发垃圾邮件、重复发帖、灌水。要友好，并记住我们同享着同一个虚拟空间。
 
-* Try to keep the language at least PG-13. We're not your nanny and we're not going to give you grief over the odd curse
-  word, but keep it within the bounds of reason and courtesy.
+* 言语上尽量保持 PG-13 分级。我们不是你的保姆，也没有在你说些奇怪的脏话时让你受挫的打算，但请保持在理性和礼貌的界限之内。
 
-* Racism, sexism, bigotry, or hateful language is forbidden. Don't even try it. This is a strict rule - don't break it.
+* 禁止种族主义、性别歧视、偏执或伤人的言语。不要去尝试，这是一个严格的规则——不要打破它。
 
-* Be nice to the operators and admins. They are *volunteers*, and their time is frequently limited. While they are very
-  often happy to talk with you, please don't overdo private messages, pinging ops in IRC, and so forth.
+* 善待管理员与操作员。它们都是 *志愿者*，时间常常有限。虽然他们往往非常高兴和你交谈，但请不要过度地发送私人消息，在
+  IRC 上频繁艾特管理员，等等。
 
-* Only private message ops/mods if something needs to be kept private, they are not your personal search engine.
+* 只在信息需要私下交流时才向管理员发送私人消息，管理员不是你的私人搜索引擎。
 
-* Please avoid discussions of politics, religion and similar controversial topics. Not only is it not relevant to Sponge,
-  it tends to create conflict where there doesn’t need to be any.
+* 请避免讨论政治、宗教及其它争议性话题。这些话题不只是与 Sponge 无关，还往往会造成不必要的冲突。
 
-* Don't bash other projects, Mojang, or people associated with them.
+* 不要批判其它项目，Mojang，或与之相关的人。
 
-* Don’t ask when Sponge will be ready. It’ll be done when it’s done. When it’s done, don’t ask for updates. They come
-  out when they come out. This is a general rule for all open source projects.
+* 不要问 Sponge 何时会完成，当它完成时自然就会完成。当它完成了，就不要要求更新。该出自然会出，这是所有开源项目的一般规则。
 
-* Advertising in any form is prohibited on any Sponge system. This includes but is not limited to advertising your
-  favorite server hosting company, the server you play on, some piece of software you use for fun, another game, or
-  whatever. Some exceptions are made in *Off-Topic* sections and are solely at the discretion of moderation staff.
+* 在所有的 Sponge 系统中都禁止任何形式的广告。这包括但不限于给你最喜欢的服务器托管商、你在玩的服
+  务器、你乐忠于的一些软件或其它游戏等打广告。一些例外情况已在 *Off-Topic* 说明，管理人员对此有酌情决定权。
 
-* Do not attempt to make a sale or sell anything on Sponge websites or systems. This includes but is not limited to
-  plugins (mods or any variation of the term), art assets, services, or any work to be provided. If it comes to our
-  attention that a plugin hosted by Sponge is being used as a promotion as a for-sale "lite" version, we reserve the
-  right to remove the plugin listing. What constitutes as a for-sale "lite" version will be decided at the discretion
-  of Sponge Staff.
+* 不要尝试在 Sponge 的网站等系统上出售任何东西。这包括但不限于插件（模组，或该术语的变种）、艺术
+  资源、服务或提供任何工作。如果被我们注意到一个托管在 Sponge 的插件在以“Lite”版本的形式进行销售宣
+  传，我们有权删除该插件。如何会构成以“Lite”版本的形式进行销售，对此 Sponge 工作人员拥有酌情决定权。
 
-* We aim to comply entirely with the Mojang EULA, to that end any plugins, services, posts and/or links suspected of
-  violating the EULA may be removed at the discretion of the Sponge Staff or at the request of Mojang AB.
+* 我们的目标是完全遵循 Mojang EULA，为此 Sponge 工作人员可能会根据 Mojang AB 的要求删除任何涉嫌违反
+  EULA 的插件、服务、帖子或链接。
 
-* Don’t spread rumors or falsehoods about the Sponge projects, staff members, affiliates or partners of Sponge, or any
-  other defamatory statements that might harm the project.
+* 不要散播与 Sponge 项目、其工作人员、其附属或合作伙伴相关的谎话谣言，以及其它任何可能会损害这个项目的诽谤性文字。
 
-* If you're banned or suspended, it is for a reason. Don't evade or attempt to get around bans.
+* 如果你的账号被封禁或暂停，那是有原因的。不要逃避或试图避开封禁。
 
-* The moderator, administrator or manager(s) of the various communication channels in use by the Sponge project shall
-  have the last word in any dispute.
+* 在 Sponge 项目使用的各种社交频道中的版主及管理员拥有最终解释权。
 
 
 .. note::
 
-    Any of the above rules are subject to change at any time without warning. Any content found to be in violation of
-    these rules, even if the content was created before a rule was in place, can be removed by moderator approval. These
-    rules apply generally to all Sponge methods of communication, but each individual sub method (eg: subReddit or Forum
-    category) may have its own set of additional rules and guidelines to add on top of these general rules. If this is
-    the case, both sets of rules must be followed. Rules and guidelines evolve as the Sponge community evolves. Use only
-    as directed; excessive use of FLARD may rot your socks.
+    上述的任何规则可在任何时候没有提醒的情况下发生变更。任何被发现违反规则的内容，在经过批准后都会被
+    删除，即使该内容创建于规则创建之前。这些规则普遍适用于 Sponge 所有的交流方式，但每一个独立的方式
+    （例如：subReddit 或论坛版块）可能会有其自身的一套在这些一般规则之上的额外规则或准则。如果这样，
+    每一套规则都应该遵守。规则和准则会随着 Sponge 社区的发展而发展。仅作指导；过度考究会适得其反。
