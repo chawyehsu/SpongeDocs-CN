@@ -22,10 +22,10 @@
 了解 Sponge 的开发进度。如果你真的想帮助开发，那么请查看 :doc:`/contributing/index`。
 
 
-论坛准则
+论坛规则
 -----------
 
-- 完整的 Sponge 论坛准则与指南可以查阅 :doc:`rules`。
+- 完整的 Sponge 论坛规则与准则可以查阅 :doc:`rules`。
 
 
 主题分类

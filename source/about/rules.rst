@@ -6,7 +6,7 @@
 
 * 官方 IRC 频道：#sponge, #spongedev, #spongedocs
 * Sponge 论坛
-* GitHub 与 BUG / 问题追踪系统
+* GitHub 与 BUG / 问题跟踪系统
 * Sponge subReddit
 * Sponge TeamSpeak 服务器
 * Sponge 项目的其它官方交流工具
