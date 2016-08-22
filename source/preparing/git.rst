@@ -1,79 +1,74 @@
 ==============
-Installing Git
+安装 Git
 ==============
 
-Git is an open-source version control system, and helps tremendously with collaborative project development.
+Git 是一个开源的版本控制系统，它极大地帮助了项目的协同开发。
 
-The Sponge project, alongside thousands of other open-source projects, hosts its Git repositories on GitHub. Thus,
-Git is a crucial tool in the development of Sponge and the Sponge API.
+Sponge 项目与其它数以千计的开源项目一样，将它的代码托管在了 GitHub 上。因此，Git
+是 Sponge 及 Sponge API 开发中至关重要的工具。
 
-The `Git website <https://www.git-scm.com/>`__ has substantial documentation, and their downloads page offers a range
-of options for GUI clients suitable for various operating systems.
+`Git 网站 <https://www.git-scm.com/>`__ 上有大量的文档，同时它们的下载页面提供一系列适用于各种操作系统的 GUI 客户端。
 
-Download
+下载
 ========
 
 Windows
 ~~~~~~~
 
-`GitHub Desktop <https://desktop.github.com/>`_ is an easy method of installing Git on Windows, because Git is
-included as a part of the software.
+`GitHub Desktop <https://desktop.github.com/>`_ 是一种在 Windows 上安装 Git 的简易方式，因为 Git 已集成在该软件中。
 
-Rebooting your computer after installing Git is recommended.
+建议在安装完成后重启你的计算机。
 
 Mac
 ~~~
 
-There are a couple of ways to install Git on Mac OS X.
+在 Mac OS X 上安装 Git 有多种方式。
 
-The easiest method is to install Xcode Command Line Tools.
+最简单的方法是安装 Xcode Command Line Tools。
 
 .. warning::
 
-    These instructions do not work on Macs running a version older than Mavericks. If you are running a version of OS X
-    older than Mavericks, install the GitHub client instead.
+    以下指令不适用于比 Mavericks 更旧版本的系统。如果你正在使用一个比 Mavericks
+    更旧版本的 OS X 系统，请安装 Github Client。
 
-1. Launch the Terminal.
-#. Run ``xcode-select --install``.
-#. Install it, and grab a cookie while you wait.
-#. Run ``git`` from the Terminal.
+1. 启动终端。
+#. 执行 ``xcode-select --install``。
+#. 等待安装，也许你可以乘机来块饼干。
+#. 在终端运行 ``git``。
 
-Alternatively, you can install `GitHub Desktop <https://desktop.github.com/>`_. Git is available as a part of the GitHub
-Desktop installation.
+或者，你可以安装 `GitHub Desktop <https://desktop.github.com/>`_。安装 GitHub Desktop 后 Git 部分也是可用的。
 
-Rebooting your computer after installing Git is recommended.
+建议在安装完成后重启你的计算机。
 
 Linux and Unix
 ~~~~~~~~~~~~~~
 
-The simplest method of installing Git on Linux is by using the package manager that came with your Linux distribution.
+在 Linux 上安装 Git 最简单的方法是使用你的发行版的包管理系统。
 
 .. note::
 
-    You may need to prefix these commands with ``sudo``.
+    你也许需要在以下命令前加上 ``sudo``。
 
-1. Launch the Terminal.
-#. Run ``apt-get install git`` if you are on a Ubuntu or Debian-based distribution. Run ``yum install git`` if you are on Fedora.
+1. 启动终端。
+#. 如果你使用 Ubuntu 之类的 Debian 系发行版，执行 ``apt-get install git``。如果是 Fedora，执行 ``yun install git``。
 
-GitHub Desktop is currently not available for Linux, unlike Windows and Mac.
+不像 Windows 和 Mac，GitHub Desktop 目前没有 Linux 版。
 
-Rebooting your computer after installing Git is recommended.
+建议在安装完成后重启你的计算机。
 
-Setup
+设置
 =====
 
-Who Are You?
+你是谁？
 ~~~~~~~~~~~~
 
-Before you even start to work with git and the repository, make sure your
-git configuration has your identity set up. Open up your CLI and enter:
+在开始使用 git 和仓库之前，请确保你的 git 配置已设置了你的身份。打开你的 CLI 并输入：
 
 .. code-block:: none
 
    git config --list
 
-Look for ``user.name`` and ``user.email``. If they are not the same username and email as your Github account
-then set them:
+查找 ``user.name`` 和 ``user.email``。如果它们和你在 GitHub 帐户上的用户名和电子邮件不同，请设置它们：
 
 .. code-block:: none
 
@@ -83,4 +78,4 @@ then set them:
 
 .. tip::
 
-   Do not proceed with any contribution in any Sponge repository until you establish your ``user.name`` and ``user.email``.
+   在确立你的 ``user.name`` 和 ``user.email`` 之前，不要对 Sponge 的任意仓库做出任何提交。
