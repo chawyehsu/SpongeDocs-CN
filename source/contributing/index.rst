@@ -1,15 +1,15 @@
 ======================
-Contributing to Sponge
+向 Sponge 做贡献
 ======================
 
-This sections intends to show you ways to get involved with Sponge.
+本章节旨在告诉你如何参与到 Sponge 中。
 
-What are the projects I can help with?
+我可以帮助哪些项目？
 ======================================
 
-The Sponge Project and its parts are maintained on `GitHub <https://github.com/spongepowered>`_. If you're unfamiliar
-with GitHub and the tool git, then take a look at :doc:`howtogit` first. A read of our :doc:`guidelines` is strongly
-advised before starting any work. There are several projects we're currently maintaining:
+Sponge 项目及其组成部分在 `GitHub <https://github.com/spongepowered>`_ 上进行维护。如果你对 GitHub 与 git
+工具不太熟悉，可以先看看 :doc:`howtogit`。在开始所有工作之前，强烈建议你先阅读我们的 :doc:`guidelines`
+。我们目前正在维护着以下几个项目：
 
 * SpongeAPI
 * SpongeForge
@@ -19,52 +19,52 @@ advised before starting any work. There are several projects we're currently mai
 * SpongeDocs
 * Ore
 
-If you want to know more about the structure of the project and how everythings tied together, head over to
-:doc:`../about/structure`.
+如果你想了解更多关于该项目的架构以及各个部分是如何联系在一起的，可以前往查阅 :doc:`../about/structure`。
 
-What kind of help is needed?
+需要什么样的帮助？
 ============================
 
-Basic contributions
+基本的贡献
 ~~~~~~~~~~~~~~~~~~~
 
-This can be done by almost everyone. You don't need to know a programming language like Java or Python to:
+以下是几乎每个人都可以完成的。你不需要了解诸如 Java 或 Python 的编程语言：
 
-* test SpongeForge or SpongeVanilla and report bugs or usage quirks
-* report or suggest any errors, faults or bugs you encounter
-* post suggestions or idea you have which would make Sponge better
+* 测试 SpongeForge 或者 SpongeVanilla 并报告漏洞或者使用异常
+* 报告或者建议你遇到的任何错误、故障或者漏洞。
+* 发表可以让 Sponge 变得更好的建议或者意见。
 
-Reporting bugs best via our `Github repositories <https://github.com/spongepowered/>`_, suggestions fit onto our
-`forums <https://forums.spongepowered.org/>`_. Just have a look at our
-:doc:`Bug Reporting page <../server/spongineer/bugreport>` for further instructions.
+通过我们的 `GitHub 仓库 <https://github.com/spongepowered/>`_ 来报告漏洞，和我们的
+`论坛 <https://forums.spongepowered.org/>`_ 来提供建议。查看我们的
+:doc:`Bug Reporting page <../server/spongineer/bugreport>` 以获取更多的信息。
 
-Intermediate Contributions
+中级的贡献
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You should at least have basic knowledge of Java, Python or reST to help out on the following tasks:
+你应该至少具备 Java、Python 或 reST 语言的基础知识来帮助我们完成以下的工作：
 
-* help fixing bugs
-* finish the implementation of the API (SpongeForge and SpongeVanilla)
-* :doc:`help writing the SpongeDocs <spongedocs>`
-* help `translate the Docs on Crowdin <https://crowdin.com/project/sponge-docs>`_
-* help out developing Ore
+* 帮助修复漏洞
+* 完成 API 的实现（SpongeForge 与 SpongeVanilla）
+* :doc:`帮助撰写 SpongeDocs <spongedocs>`
+* 帮助 `在 Crowdin 上翻译文档 <https://crowdin.com/project/sponge-docs>`_
+* 帮助发展 Ore
 
-The development of the `Sponge API <https://github.com/spongepowered/SpongeAPI>`_,
-`SpongeForge <https://github.com/spongepowered/SpongeForge>`_,
-`SpongeVanilla <https://github.com/spongepowered/SpongeVanilla>`_ and `Ore <https://github.com/spongepowered/Ore>`_ as
-well as the `SpongeDocs <https://github.com/spongepowered/SpongeDocs>`_ is done in several repositories hosted on Github.
+`Sponge API <https://github.com/spongepowered/SpongeAPI>`_，`SpongeForge
+<https://github.com/spongepowered/SpongeForge>`_，`SpongeVanilla
+<https://github.com/spongepowered/SpongeVanilla>`_ 和
+`Ore <https://github.com/spongepowered/Ore>`_ 以及 `SpongeDocs
+<https://github.com/spongepowered/SpongeDocs>`_ 的开发是在托管于 GitHub 上的几个仓库中进行的。
 
-Advanced Contributions
+高级的贡献
 ~~~~~~~~~~~~~~~~~~~~~~
 
-And finally these are the most difficult things you can help out with. Advanced knowledge of Java, Minecraft and at
-least basic knowledge of the `Sponge API <https://github.com/spongepowered/SpongeAPI>`_ and its
-`structure <https://jd.spongepowered.org>`_ is strongly advised before attempting to help out with:
+最后，以下是你能提供帮助的最困难的事情。在尝试提供帮助之前，强烈建议你具备 Java 和 Minecraft
+的高级知识，同时至少具备 `Sponge API <https://github.com/spongepowered/SpongeAPI>`_
+及其 `架构 <https://jd.spongepowered.org>`_ 的基础知识：
 
-* adding functionality to the API (:doc:`implementation/pr`)
-* implementing advanced API functionality in the implementations
+* 向 API 中增加功能（:doc:`implementation/pr`）
+* 在实现中实现高级的 API 功能
 
-Contents
+目录
 ========
 
 .. toctree::

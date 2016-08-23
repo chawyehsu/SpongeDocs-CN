@@ -20,15 +20,14 @@ SpongeDocs。`这篇文章 <http://blog.atom.io/2014/03/13/git-integration.html>
 Notepad++
 ~~~~~~~~~
 
-Notepad++ is, arguably, one of the most popular text editors.
+Notepad++ 可以说是最受欢迎的文本编辑器之一。
 
-**Notepad++** can be downloaded for free from http://www.notepad-plus-plus.org/.
+**Notepad++** 可以从 http://www.notepad-plus-plus.org/ 免费下载。
 
 Sublime Text
 ~~~~~~~~~~~~
 
-Sublime Text is a multi-platform text editor, with quite a few useful features. It includes the ability to customize the
-look of the editor, create useful macros, and even includes a plugin API to make your editing even easier. Sublime Text
-provides both a free version and a paid version.
+Sublime Text 是一个跨平台的文本编辑器，它有不少有用的特性。它允许用户自定义编辑器的外观、创建有用的
+宏，甚至还带有一套能让你的编辑工作变得更简单的插件 API。Sublime Text 同时有免费和付费版本。
 
-**Sublime Text** can be downloaded for free from http://www.sublimetext.com/
+**Sublime Text** 可以从 http://www.sublimetext.com/ 免费下载。
