@@ -1,18 +1,18 @@
 =================================
-Porting Sponge to Other Platforms
+将 Sponge 移植到其它平台
 =================================
 
-Currently, two official Sponge implementations are being developed:
+目前，以下两个官方 Sponge 实现正在开发中：
 
-* SpongeForge, a coremod for Minecraft Forge
-* SpongeVanilla, based on the Vanilla Minecraft Server
+* SpongeForge, 一个 Minecraft Forge 的核心模组
+* SpongeVanilla, 基于原版 Minecraft 服务器
 
-If you plan to implement the Sponge API on another platform, please make sure to provide all needed dependencies.
+如果你打算在其它平台上实现 Sponge API，请务必提供所有必要的依赖。
 
-Expected Dependencies
+依赖假设
 =====================
 
-Plugin developers expect the following dependencies to be bundled with implementations:
+插件开发者们将会假设以下依赖和 Sponge 实现捆绑存在：
 
 * Guava
 * Guice
