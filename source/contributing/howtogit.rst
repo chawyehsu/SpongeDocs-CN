@@ -1,41 +1,37 @@
-===============
-How to Git(Hub)
-===============
+=================
+如何使用 Git(Hub)
+=================
 
-If you want to assist in creating Sponge, you have an awesome addition to the API, or you want to improve our Docs,
-then you'll need to become familiar with ``git`` and GitHub. If you're already familiar with forking, branches,
-issues, pull-requests and commits, then just skip this topic. If you have no clue what we're talking about, then read on.
+如果你想协助开发 Sponge，或者你对 API 有一个好的补充，又或者你想改进我们的文档，那么你将需要熟悉
+``git`` 以及 GitHub。如果你已经熟悉 Forking、Branches、Issues、Pull Requests 以及 Commits
+，那么你可以跳过本文。如果你不清楚我们在说些什么的话，请接着读下去。
 
 .. note::
-  This guide assumes that you've read :doc:`../preparing/git` and that you've already setup your machine with a Git
-  client of your choice.
+  本指南假定你已经阅读了 :doc:`../preparing/git` 并且已经在你的机器上配置好了你所选择的 Git 客户端。
 
-The Basic Concept of Git and GitHub
+Git 和 GitHub 的基本概念
 ===================================
 
-Git allows many different developers to develop a single piece of software at the same time. GitHub is a website where
-developers can collaborate and share their work with others. GitHub relies on Git for the management of said work.
+Git 允许许多不同的开发者在同一时间开发同一个软件。GitHub
+是一个网站，开发者可以在上面进行协助，并与他人共享他们的工作。GitHub 依赖 Git 来管理上述的工作。
 
 .. tip::
-  If you're unfamiliar with the Git and GitHub vocabulary, have a look at the
-  `glossary page on Github <https://help.github.com/articles/github-glossary/>`_.
+  如果你不熟悉 Git 和 GitHub 的词汇，可以看看 `GitHub 的术语表页面 <https://help.github.com/articles/github-glossary/>`_。
 
 .. image:: /images/contributing/repo-overview.svg
     :alt: Repo Overview
 
-In this case the repo is named ``SpongePowered``, has two branches named ``master`` and
-``feature 1`` and also some commits on both branches.
+如上图所示，该仓库名被命名为“SpongePowered”，拥有两个分别名为“master”和“feature
+1”的分支，和其上的若干提交。
 
-Let's put these terms into context - beginning with the *repository*. The repository (short: *repo*) is the place where
-a project stores its files. The SpongePowered repositories are located at `GitHub <http://github.com/spongepowered>`__.
-However, this repo has some access restrictions to preserve it from unwanted or malicious changes. You can't simply make
-changes yourself, as the repo is read-only for regular users. Now you may wonder how you're supposed to file proposals
-and changes. Well, that's where *forks* come into play. You can grab a copy of the SpongePowered repos, and make your
-changes there. When you're done, you open it as a pull request (*PR*) on our repository. Your proposed additions and
-changes can then be reviewed, and staff will tell you if something is wrong, or needs improvement, and eventually merge
-the final PR.
+让我们将上述项作为背景——以这个 *仓库* 开始吧。 仓库是一个存放项目文件的地方。 SpongePowered
+的仓库位于 `GitHub <http://github.com/spongepowered>`__
+上。然而，这个仓库被设定了一些访问控制以保护它免受意外或恶意的更改。该仓库对一般用户是只读
+的，所以你不能简单地自己去做更改。现在你可能在想你应该如何提交建议及更改。嗯，这时候该 *Fork*
+发挥作用了。你可以得到一份 SpongePowered 仓库的副本，并能在上面做更改。完成更改后，以此向我们的仓库发送一个
+拉取请求（*PR*）。之后你的增改建议将会被检查，如果出现错误或有需要改进的地方，工作人员会告知你，最后 PR 将会被合并。
 
-Here's a short summary of the procedure described above, before we go into detail:
+在我们详细说之前，先简短概括一下上述流程：
 
 1. Fork the repo of your choice
 #. Clone it to your local machine
