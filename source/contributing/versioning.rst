@@ -1,23 +1,21 @@
 ==============================================
-Versioning System and Repository Branch Layout
+版本控制系统与仓库分支结构
 ==============================================
 
-With the release for beta we've moved the SpongeAPI versioning to semantic versioning (see http://semver.org/).
-This change means that every time that we make a release we have to increment the version according to the rules
-of semver.
+随着 beta 版的发布，我们已经将 SpongeAPI 的版本号迁移至语义化版本（见
+http://semver.org/）。这个更改意味着每一次我们发布一个新版本时我们必须根据
+semver 的规则对版本号进行递增。
 
 SemVer
 ======
 
-SemVer uses the scheme ``X.Y.Z``, where ``X`` is a *major* version, ``Y`` is a *minor* one and ``Z`` finally is a
-*patch* version.
-A release containing changes which are not backwards-compatible must be one *major* version ahead of the previous
-release. If there are only new features that are still backwards compatible, then the new release will be one *minor*
-version ahead of the previous release, and if the release strictly contains bugfixes then only the *patch* version will
-be incremented.
+SemVer 使用 ``X.Y.Z`` 体系，``X`` 是 *主* 版本号，``Y`` 是 *次* 版本号以及 ``Z`` 是 *修订* 号。
+一个包含不能向下兼容的更改的发布必须比以前的发布大一个 *主*
+版本号。如果仅有仍然向下兼容的新特性，则新发布将比以前的发布大一个 *次*
+版本号，而如果发布仅仅只包含错误修正，则只递增一个 *修订* 号。
 
-This means that for example ``3.2.0`` is fully compatible to ``3.0.0`` while ``4.0.0`` isn't binary compatible to
-``3.0.0``. ``3.1.0`` and ``3.1.2`` are fully interchangeable besides the bugs that were fixed.
+这就是说例如 ``3.2.0`` 是与 ``3.0.0`` 完全兼容的，``4.0.0`` 则与 ``3.0.0``
+非二进制兼容。而 ``3.1.0`` 与 ``3.1.2`` 除了 BUG 修复之外是完全可互换的。
 
 The layout of our branches (described below) is designed to assist this process by allowing us to make minor releases
 without a breaking change forcing us to make it a major release. This branch layout applies to the SpongeAPI,
