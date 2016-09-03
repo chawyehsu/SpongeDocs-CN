@@ -1,33 +1,27 @@
-# Sponge Documentation
+# Sponge Documentation CN :cn:
 
-[![Build Status](https://travis-ci.org/SpongePowered/SpongeDocs.svg?branch=master)](https://travis-ci.org/SpongePowered/SpongeDocs)
+这里是 Sponge 官方文档的民间**非官方**中文翻译版本仓库。
+建立此仓库的目的是在 Sponge 官方文档仍在不断迭代的状态下，形成一份相对独立稳定的中文文档，目前主力翻译与维护着 v3.1.0 版本的文档。
+*（说白了，官方文档的频繁更新不利于翻译的进行）* :new_moon_with_face:
 
-This is the repository where the Sponge documentation is held.
+建议查看 Sponge 官方完整的多语言在线文档，以获取**最新**的文档资料。地址：[Sponge Docs](https://docs.spongepowered.org/)
 
+## 参与官方在线翻译
 
-The latest version may be viewed in full by visiting [Sponge Docs](https://docs.spongepowered.org/)
+建议前往 Sponge 官方的翻译地址参与官方翻译工作：[CrowdIn 翻译页](https://translate.spongepowered.org)。
 
-## Contributing
+## 参与本仓库的翻译
 
-Instructions and Guidelines on how to contribute can be found on [the Docs themselves](https://docs.spongepowered.org/en/contributing/spongedocs.html).
+配置本地翻译与构建环境：
 
-## Translations
+1. [安装 Python 2.7 与 Sphinx](http://sphinx-doc.org/latest/install.html)
+2. [安装 node.js](http://nodejs.org/download/)
 
-We're eagerly looking for translators! Please visit the [CrowdIn translation page](https://translate.spongepowered.org), sign up, join the team, and start translating.
-
-## Local Environment
-
-You can setup an environment so you can instantly see the changes that make to the docs.
-
-1. [Install Python 2.7 and Sphinx](http://sphinx-doc.org/latest/install.html)
-2. [Install pip](https://pip.pypa.io/en/latest/installing.html)
-3. [Install node.js](http://nodejs.org/download/)
-
-In terminal or the command line, within the directory containing this README, run the following commands:
+在项目目录下执行：
 
 	npm install -g gulp
 	npm install
 	pip install -r etc/requirements.txt
 	gulp
 
-Your browser should open to reveal the docs. When you make a change to the documentation, the docs should refresh in the browser (possibly after a few seconds).
+将会在本地监听 ``http://localhost:8000``，并自动启动浏览器打开页面，对文档做修改后页面会自动刷新。
