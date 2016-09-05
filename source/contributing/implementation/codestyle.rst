@@ -1,81 +1,75 @@
 ==========
-Code Style
+代码规范
 ==========
 
-We follow `Google's Java Style Guidelines <https://google.github.io/styleguide/javaguide.html>`_ with a
-few additions and modifications, which are described herein.
+我们大致遵循 `Google 的 Java 风格指南 <https://google.github.io/styleguide/javaguide.html>`_
+并有一些微小补充与修改，下文将具体介绍。
 
 .. tip::
-    You can use our code styles for Eclipse or IntelliJ IDEA to let your IDE format the code correctly for you. See
-    :doc:`../../preparing/index` for more information.
+    你可以使用我们的代码规范预设来让 IDE 为你自动格式化代码。详见 :doc:`../../preparing/index`。
 
-* Line endings
+* 行结束符
 
-  * Use Unix line endings when committing (\\n)
+  * 在提交时使用 Unix 行结束符（\\n）
 
-    * Windows users of Git can do ``git config --global core.autocrlf true`` to let Git convert them automatically
+    * Windows 的 Git 用户可以执行 ``git config --global core.autocrlf true`` 来让 Git 进行自动转换
 
-* Column width
+* 列宽
 
-  * 80 for Javadocs
-  * 150 for code
-  * Feel free to wrap when it will help with readability
+  * Javadoc 80 字符
+  * 代码 150 字符
+  * 如果对提高可读性有帮助，请自由换行
 
-* Indentation
+* 缩进
 
-  * Use 4 spaces for indentations, do not use 2 spaces
+  * 使用 4 个而不是 2 个空格来缩进
 
-* Vertical whitespace
+* 空行
 
-  * Place a blank line before the first member of a class, interface, enum, etc. (i.e. after ``class Example {``) as
-    well as after the last member
+  * 在每个类、接口、枚举等的第一个成员前（例如在 ``class Example {`` 之后）和最后一个成员后放一个空行
 
-* File headers
+* 文件头
 
-  * File headers must contain the license headers for the project. Use the ``licenseFormat`` Gradle task to add them
-    automatically.
+  * 文件头必须包含项目的许可头。使用 Gradle 的 ``licenseFormat`` 任务来自动添加。
 
-* Imports
+* 引入
 
-  * Imports must be grouped in the following order, where each group is separated by an empty line
+  * 引入必须以下列方式分组，每组之间以一个空行分隔
 
-    * Static imports
-    * All other imports
-    * ``java`` imports
-    * ``javax`` imports
+    * 静态引入
+    * 所有其它引入
+    * ``java`` 引入
+    * ``javax`` 引入
 
-  * This differs from Google's style in that imports are not grouped by top-level package, they are all grouped as one.
+  * 这与 Google 把引入以顶层包分组的风格不同，我们将它们全部分在同一组。
 
-* Exceptions
+* 异常
 
-  * For exceptions that are to be ignored, name the exception variable ``ignored``
+  * 对于被忽略的异常，请将异常变量命名为 ``ignored``
 
-* Field accesses
+* 字段访问
 
-  * Qualify **all** field accesses with ``this``
+  * 使用 ``this`` 来访问 **所有的** 成员
 
 * Javadocs
 
-  * Do not use ``@author``
-  * Wrap additional paragraphs in ``<p>`` and ``</p>``
-  * Capitalize the first letter in the descriptions within each "at clause", i.e. ``@param name Player to affect``, no
-    periods
+  * 不要使用 ``@author``
+  * 用 ``<p>`` 和 ``</p>`` 包裹段落
+  * 每个 ``@语句`` 的描述部分首字母大写。例如 ``@param name Player to affect``，不要有句号
 
-Code Conventions
+代码约定
 ================
 
-* Use :doc:`/plugin/optional/index` instead of returning
-  ``null`` in the API
-* Method parameters accepting ``null`` must be annotated with ``@Nullable`` (from javax.*), all methods and parameters
-  are ``@Nonnull`` by default.
-* Use `Google Preconditions <https://code.google.com/p/guava-libraries/wiki/PreconditionsExplained>`_ for null- and
-  argument checking.
+* 在 API 中使用 :doc:`/plugin/optional/index` 而不是返回 ``null``
+* 所有可接受 ``null`` 的方法参数必须注解为 ``@Nullable`` （位于 javax.*），所有的方法和参数默认均为 ``@Nonnull``。
+* 使用 `Google Preconditions <https://code.google.com/p/guava-libraries/wiki/PreconditionsExplained>`_
+  进行 null 与参数的检测。
 
-The Gist
+Gist
 ========
 
-While we urge that you read Google's Java conventions particularly, the two are fairly long documents. To get you
-started quickly, here is an example of properly formatted code:
+尽管我们强烈建议你阅读 Google 的 Java
+代码约定，但是它们实在是太长了。为了帮助你快速开始，下面是一个格式正确的代码样例：
 
 .. code-block:: java
 

@@ -1,14 +1,14 @@
 =================
-Developing Sponge
+Sponge 开发
 =================
 
-This sections describes the best way to approach the project when you're intending to develop Sponge itself. It is
-mandatory to be familiar with :doc:`git <../howtogit>` and our :doc:`codestyle`. Basic knowledge of the
-:doc:`/about/structure` is also very helpful.
+这一章节给打算参与 Sponge 开发的你描述了参与该项目的最佳途径。这要求你熟悉
+:doc:`git <../howtogit>` 与我们的 :doc:`codestyle`。同时了解 :doc:`/about/structure`
+的基本知识也是很有帮助的。
 
-If you want to join us in creating Sponge, head straight over to the :doc:`pr` page.
+如果你想加入我们，请直接查阅 :doc:`pr` 页面。
 
-Contents
+目录
 ========
 
 .. toctree::
@@ -25,4 +25,4 @@ Contents
 
 .. tip::
 
-    Video tutorials by trusted developers will be featured here when available.
+    当有由受信任的开发者制作的视频教程时，将在这里进行推荐。
