@@ -1,9 +1,9 @@
 ===============================
-Debugging Sponge Within the IDE
+使用 IDE 调试 Sponge
 ===============================
 
 .. note::
 
-    This page has not been filled yet by our Documentation Team. If you feel like you can help, you can do so on `our
-    GitHub repository <https://github.com/spongepowered/spongedocs>`_. Also see the `related GitHub Issue
-    <https://github.com/SpongePowered/SpongeDocs/issues/356>`_ for more information on what is required.
+    文档团队尚未填补本页面。如果你觉得你能提供帮助，可以在 `我们的 GitHub 仓库
+    <https://github.com/spongepowered/spongedocs>`_ 上进行。同时请查阅 `GitHub 上的有关 Issue
+    <https://github.com/SpongePowered/SpongeDocs/issues/356>`_ 了解要求详情。

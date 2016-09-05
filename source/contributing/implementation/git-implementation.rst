@@ -1,32 +1,30 @@
 ========================================
-Git Workflow for API and Implementations
+API 及其实现的 Git 工作流
 ========================================
 
-Developing the API
+API 的开发
 ==================
 
-The basic process of adding your changes is explained in the :doc:`../howtogit` section. On top of that we suggest that
-you create your new branch with a meaningful name.With the new branching model you need to be aware which
-branch you need to base your PRs on and where it should get merged afterwards. Read about the new branching and
-versioning model here: :doc:`../versioning`
+添加更改的基本流程已经在 :doc:`../howtogit`
+章节中说明。此外我们建议你在创建新分支时使用有意义的名字。利用新分支模型你需要知道你的 PR
+是基于哪个分支以及后面应该合并到哪里。关于新分支及版本模型请查阅 :doc:`../versioning`。
 
-Additionally we require that you ensure the module will compile with ``gradle compileJava``.
-This will run a simple build of the source files. When finished successfully, you can PR your changes to the SpongeAPI
-repo.
+另外，我们要求你确保模块能够使用 ``gradle compileJava``
+进行编译。这将会进行一次对源文件的简单构建。当构建成功完成后，你就可以向 SpongeAPI
+仓库发起你的更改 PR 了。
 
-Developing the Implementation
+实现的开发
 =============================
 
-The process for the implementations is almost the same as for the API. You add your changes as described in :doc:`../howtogit`.
-Note that you should give your branches a meaningful name. With the new branching model you need to be aware which
-branch you need to base your PRs on and where it should get merged afterwards. Read about the new branching and
-versioning model here: :doc:`../versioning`
+实现的流程与 API 的几乎一样。根据 :doc:`../howtogit`
+的描述添加你的更改。要注意的是你应该使用有意义的分支名。利用新分支模型你需要知道你的 PR
+是基于哪个分支以及后面应该合并到哪里。关于新分支及版本模型请查阅 :doc:`../versioning`。
 
-Run ``gradle compileJava`` to check if everything compiles without errors.
+执行 ``gradle compileJava``，检查编译是否有错误。
 
-Since you are working on the implementation, there is a possibility that your work included changes in the API. This is
-okay. Just remember to ensure the pointers for the version of the SpongeAPI match the version of your branch prior to
-committing and pushing. To do this, you may need to add the submodules to the commit (with ``git add SpongeAPI`` and/or
-``git add Mixin``) prior to committing on your implementation work.
+因为你正在进行实现的工作，所以有可能你的工作包含了对 API
+的更改。这是正常的。只要记得确保 SpongeAPI
+的版本指针与你做出提交和推送前的分支的版本匹配。要做到这一点，你可能需要在提交你的实现的工作之前，将
+submodules 添加到提交中（使用 ``git add SpongeAPI`` 或 ``git add Mixin``）。
 
-You may open a pull request once your commit is pushed to your fork or the repository.
+一旦你的提交被推送到你的派生仓库，你便可以新建一个拉取请求了。
