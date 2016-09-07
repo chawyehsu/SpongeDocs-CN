@@ -1,41 +1,39 @@
 ===============
-Installing Java
+安装 Java
 ===============
 
-Java is needed to run Sponge and Minecraft. You most likely already have Java, but you may need to update it.
+运行 Sponge 与 Minecraft 需要 Java。或许你已经安装了 Java，但你可能需要升级 Java 版本。
 
-Sponge requires Java 8 (specifically ``1.8.0_40`` or above) at this time. Older Java versions are deprecated and will not
-work with Sponge. The difference between major versions of Java (6, 7, 8) is significant, and older versions cannot run
-Sponge properly.
+目前 Sponge 需要 Java 8（明确地是 ``1.8.0_40`` 或以上版本）。旧版 Java 已经过时并且不能用于运行
+Sponge。Java 各个主要版本（6，7，8）之间的区别显著，使用旧版本不能正确地运行 Sponge。
 
-Installing Java
+安装 Java
 ===============
 
-If you have Windows or Mac OS X for your computer, you can `download Java from the official website
-<https://java.com/en/download/manual.jsp>`__.
+如果你的计算机使用 Windows 或是 Mac OS X，你可以 `从官方网站下载 Java
+<https://java.com/en/download/manual.jsp>`__。
 
-Linux users can install OpenJDK via their package manager. OpenJDK is the open source version of the Oracle version of
-Java, and it should work just as well, if not better. However, it's also possible to `download the Oracle version for
-Linux <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`__, but be aware that many Java-dependent
-Linux packages will still install OpenJDK anyway.
+Linux 用户则可以通过包管理器安装 OpenJDK。OpenJDK 是 Oracle Java
+的开源版本，虽然不比后者好，也能正常使用。当然你也可以 `下载 Linux 版本的 Oracle Java
+<http://www.oracle.com/technetwork/java/javase/downloads/index.html>`__，但要知道，很多依赖
+Java 的 Linux 应用程序仍然会安装 OpenJDK。
 
-32-bit vs. 64-bit
+32 位与 64 位
 ~~~~~~~~~~~~~~~~~
 
-If your computer supports it, you should use 64-bit versions of Java whenever possible. The Java installers from the
-linked website should detect whether your computer is ready for 64-bit.
+如果你的计算机支持 64 位，那就尽可能地安装使用 64 位的 Java。上述网站链接中的
+Java 安装程序会检测你的计算机是否支持 64 位。
 
-Because the 64-bit version of Java runs considerably better, and also lets Java use more than ~3 GB of your RAM (memory),
-we always recommend it over 32-bit.
+因为 64 位的 Java 运行起来更好，并且能使用超过 3GB 的内存，所以我们一般不推荐使用 32 位。
 
-Most modern computers support 64-bit.
+大多数现代的计算机都支持 64 位。
 
-JDK vs. JRE
+JDK 与 JRE
 ~~~~~~~~~~~
 
-The JRE (Java Runtime Environment) is used to run Java applications. The download page linked above provides the JRE.
+JRE（Java 运行时环境）是用来运行 Java 应用程序的。上文中的下载链接页面提供的就是 JRE。
 
-The JDK (Java Development Kit) is used to create Java applications, and you do not need it unless you plan to make
-Sponge plugins or work on Sponge. However, in some cases, you may need the JDK to diagnose a running Java application
-such as Sponge. You can download the JDK `from a different site
-<http://www.oracle.com/technetwork/java/javase/downloads/index.html>`__.
+JDK（Java 开发工具包）是用来创建 Java 应用程序的。你一般不需要它，除非你打算编写 Sponge
+插件或是参与 Sponge 开发。不过，某些情况下你可能需要用 JDK 去诊断 Java
+应用程序（例如 Sponge）的运行情况。这时你可以从另外一个网页上 `下载 JDK
+<http://www.oracle.com/technetwork/java/javase/downloads/index.html>`__。

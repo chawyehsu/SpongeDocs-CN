@@ -1,19 +1,17 @@
 =================
-Creating a Server
+创建服务器
 =================
 
-The articles in this section explain how to create and run a server powered by an implementation of the Sponge API.
+本文介绍如何建立与运行一个由 Sponge API 的实例驱动的服务器。
 
-If you're a user who wishes to create a new server using an implementation of Sponge or migrate an
-existing server to an implementation of Sponge, this is for you. Plugin developers may also be interested in the
-articles contained within this section - test servers can be useful for plugin development.
+本节内容适合于那些希望创建 Sponge 服务器或是将已有服务器迁移到 Sponge
+的用户。插件开发者或许也会对其中的部分章节内容感兴趣——服务器测试对插件开发是很有帮助的。
 
 .. note::
 
-    We attempt to be implementation-agnostic when possible, meaning that instructions generally aren't specific to one
-    implementation of the Sponge API. Nonetheless, mistakes can happen.
+    我们力图屏蔽所有实现细节，这份指南不针对任何一种具体的 SpongeAPI 实现。尽管如此，错误难免。
 
-Contents
+目录
 ========
 
 .. toctree::

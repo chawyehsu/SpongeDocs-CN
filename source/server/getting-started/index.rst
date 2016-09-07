@@ -1,8 +1,8 @@
 ===============
-Getting Started
+入门指南
 ===============
 
-Contents
+目录
 ========
 
 .. toctree::
