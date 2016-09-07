@@ -17,43 +17,37 @@ SemVer 使用 ``X.Y.Z`` 体系，``X`` 是 *主* 版本号，``Y`` 是 *次* 版
 这就是说例如 ``3.2.0`` 是与 ``3.0.0`` 完全兼容的，``4.0.0`` 则与 ``3.0.0``
 非二进制兼容。而 ``3.1.0`` 与 ``3.1.2`` 除了 BUG 修复之外是完全可互换的。
 
-The layout of our branches (described below) is designed to assist this process by allowing us to make minor releases
-without a breaking change forcing us to make it a major release. This branch layout applies to the SpongeAPI,
-SpongeCommon, SpongeForge, and SpongeVanilla repositories but not to the SpongeDocs.
+下文所述的分支结构被设计允许我们在没有重大更改时进行次版本而不是主版本的发布。这个分支结构适用于
+SpongeAPI、SpongeCommon、SpongeForge 以及 SpongeVanilla 的仓库，不适用于 SpongeDocs。
 
-SpongeAPI, SpongeCommon, SpongeForge and SpongeVanilla
+SpongeAPI，SpongeCommon，SpongeForge 和 SpongeVanilla
 ======================================================
 
-The Core Branches
+核心分支
 ~~~~~~~~~~~~~~~~~
 
-There are three branches which form the core of our repositories; they are ``master``, ``bleeding``, and
-``release``. The ``master`` and ``bleeding`` branches are for active development and the ``release`` branch tracks
-the commit as of the most recent release build.
+我们的仓库的核心分支有三个，它们分别是 ``master``，``bleeding`` 和 ``release``。``master`` 和 ``bleeding``
+分支用于进行开发，``release`` 分支则追踪最新发布构建的提交。
 
-The key differences between the ``master`` and ``bleeding`` branches is that any ``feature`` branches which are
-breaking *must* be merged into the bleeding branch. This allows the ``master`` branch to only contain
-backwards-compatible changes allowing minor versions to be released based on it if necessary.
+``master`` 和 ``bleeding`` 的关键不同点是，任何重大的 ``feature`` 分支 *必须* 合并进 ``bleeding``
+分支。而 ``master`` 分支只包含向下兼容的修改，必要时仅允许发布次版本。
 
-Release Branches
+发布分支
 ~~~~~~~~~~~~~~~~
 
-Prior to releasing builds the content of the release should be first moved to a release prep branch.
-This branch allows dedicated testing to be performed for a release without forcing a code freeze on
-the development branches. Any bugfixes applied to the ``release`` branch are merged back to the ``master``
-branch when the release is finalized. Once a release is made the version of the ``master`` and ``bleeding``
-branches are both updated: the ``master`` branch to the next minor version and the ``bleeding`` branch to
-the next major version (assuming it was not already on the next major version).
+在发布构建之前，发布的内容应该先移动到一个预备分支。在这个分支上允许为一个发布进行专门的测试，
+而不会强制冻结开发分支。当发布最终定稿时，所有应用到 ``release`` 分支上的漏洞修复都将合并回 ``master``
+分支。一旦发布完成，``master`` 和 ``bleeding`` 分支都将会更新：``master`` 分支到下一个次版本，``bleeding``
+分支到下一个主版本（假设此前还没准备到下一个主版本）。
 
-Hotfix Branches
+热修复分支
 ~~~~~~~~~~~~~~~
 
-If after a release is made, and a significant bug is found, a ``hotfix/foo`` branch can be created based on the
-last release version and a new release can be made from this hotfix branch with the patch version
-incremented by one. The hotfix branch can then be merged back into ``master`` for inclusion into future
-versions.
+如果在一个发布完成后发现了一个重大的漏斗，则可以基于最后一个发布版本创建一个 ``hotfix/foo``
+分支，并基于这个热修复分支以递增一个修订版本作出一个新的发布。然后热修复可以合并回 ``master``
+分支包含进后续的版本中。
 
-Feature Branches
+特性分支
 ~~~~~~~~~~~~~~~~
 
 New features or changes will continue to be done in a ``feature/foo`` or ``fix/bar`` branch. When merging
@@ -70,14 +64,14 @@ The SpongeDocs themselves are unversioned following our philosophy that they wil
 constant flux of ever increasing usability. However they *target* a specific version of the API, generally the most
 recent *release* of SpongeAPI.
 
-Core Branch
+核心分支
 ~~~~~~~~~~~
 
 The core branch for the SpongeDocs is ``master``. Each new commit to ``master`` triggers a rebuild of the `docs website
 <https://docs.spongepowered.org/>`_. Commits to ``master`` are generally only made when a feature branch is merged or
 a small fix not requiring review is made by SpongeDocs Staff.
 
-Feature Branches
+特性分支
 ~~~~~~~~~~~~~~~~
 
 Whenever a new feature is described, older texts are updated or reworded or the documents are restructured it is done
@@ -92,7 +86,7 @@ SpongeDocs.
 .. image:: /images/contributing/versioning-release-branch.svg
     :alt: release branch example
 
-Release Branches
+发布分支
 ~~~~~~~~~~~~~~~~
 
 If two or more feature branches are waiting on the release of their corresponding API version, they will be accumulated
