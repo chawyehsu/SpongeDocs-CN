@@ -50,34 +50,32 @@ SpongeAPI，SpongeCommon，SpongeForge 和 SpongeVanilla
 特性分支
 ~~~~~~~~~~~~~~~~
 
-New features or changes will continue to be done in a ``feature/foo`` or ``fix/bar`` branch. When merging
-back into a development branch (``master`` or ``bleeding``) you should consider whether the changes are
-breaking or are strictly backwards-compatible. If the changes are purely new features, or
-binary-compatible bugfixes, then the feature branch can be merged into the ``master`` branch. If the
-changes include any breaking changes however, then the feature branch must be merged into the
-``bleeding`` branch to be included in the next major release.
+新特性或更改会持续在 ``feature/foo`` 或 ``fix/bar`` 分支中完成。当要合并进开发分支（``master`` 或
+``bleeding``）时你应该考虑那些是重大的更改还是严格向下兼容的更改。如果更改是纯粹的新特性，或只是些二进制兼容的漏洞修
+复，那么特性分支可以合并进 ``master`` 分支。但如果是包含了重大变化的更改，则特性分支必须合并进
+``bleeding`` 分支并被包含在下一个主发布中。
 
 SpongeDocs
 ==========
 
-The SpongeDocs themselves are unversioned following our philosophy that they will never be finished, but instead in a
-constant flux of ever increasing usability. However they *target* a specific version of the API, generally the most
-recent *release* of SpongeAPI.
+按照我们的哲学 SpongeDocs 是没有版本概念且永远不会完成的，而是会在持续的变化中不断地增加可用性。不过会
+*标记* 一个特定版本的 API，一般是最近的一个 SpongeAPI *发布*。
 
 核心分支
 ~~~~~~~~~~~
 
-The core branch for the SpongeDocs is ``master``. Each new commit to ``master`` triggers a rebuild of the `docs website
-<https://docs.spongepowered.org/>`_. Commits to ``master`` are generally only made when a feature branch is merged or
-a small fix not requiring review is made by SpongeDocs Staff.
+SpongeDocs 的核心分支是 ``master`` 分支。``master`` 分支上的每一次新提交都会触发一次 `文档网站
+<https://docs.spongepowered.org/>`_ 的重新构建。一般只有特性分支合并或是由 SpongeDocs
+工作人员做出的不需要评审的小修复才会提交到 ``master`` 分支。
 
 特性分支
 ~~~~~~~~~~~~~~~~
 
-Whenever a new feature is described, older texts are updated or reworded or the documents are restructured it is done
-in a ``feature/foo`` or ``fix/bar`` branch. Those branches will then be reviewed and, once they are deemed complete,
-may be merged.
+每当要描述一个新特性，更新或改写旧的文本或者是重组整个文档，都会在 ``feature/foo`` 或 ``fix/bar``
+分支中完成。之后这些分支会被评审并在被认为是完成状态后被合并。
 
+一个特性分支中所做的更改 / 增补只有符合 **SpongeDocs 标记的当前 SpongeAPI 发布**
+才可能被合并。
 A feature branch may only be merged into master if the changes / additions made in it are correct regarding the
 **SpongeAPI release currently targeted by the SpongeDocs**. Any feature branches that describe features not yet included
 in a release stay unmerged until the corresponding API version is released and becomes the new targeted version for the
