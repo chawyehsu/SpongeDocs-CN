@@ -74,12 +74,9 @@ SpongeDocs 的核心分支是 ``master`` 分支。``master`` 分支上的每一�
 每当要描述一个新特性，更新或改写旧的文本或者是重组整个文档，都会在 ``feature/foo`` 或 ``fix/bar``
 分支中完成。之后这些分支会被评审并在被认为是完成状态后被合并。
 
-一个特性分支中所做的更改 / 增补只有符合 **SpongeDocs 标记的当前 SpongeAPI 发布**
-才可能被合并。
-A feature branch may only be merged into master if the changes / additions made in it are correct regarding the
-**SpongeAPI release currently targeted by the SpongeDocs**. Any feature branches that describe features not yet included
-in a release stay unmerged until the corresponding API version is released and becomes the new targeted version for the
-SpongeDocs.
+一个特性分支中所做的更改 / 增补只有是关于 **SpongeDocs 标记的当前 SpongeAPI 发布**
+才可能被合并进 ``master`` 分支。对未发布特性进行描述的特性分支，将在其对应的 API
+版本发布并作为 SpongeDocs 新的标记版本之前保持未合并状态。
 
 .. image:: /images/contributing/versioning-release-branch.svg
     :alt: release branch example
@@ -87,8 +84,8 @@ SpongeDocs.
 发布分支
 ~~~~~~~~~~~~~~~~
 
-If two or more feature branches are waiting on the release of their corresponding API version, they will be accumulated
-in a ``release/x.y.z`` branch before being merged into master so that any conflics may be resolved beforehand.
+如果有两个或以上的特性分支在等待它们对应 API 版本的发布，则为了在合并进 ``master``
+分支之前事先处理所有可能的冲突，它们会被累积在一个 ``release/x.y.z`` 分支中。
 
 .. image:: /images/contributing/versioning-future-release-branch.svg
     :alt: future release branch example
