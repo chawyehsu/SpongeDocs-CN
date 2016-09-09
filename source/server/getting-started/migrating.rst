@@ -1,9 +1,8 @@
 ===================
-Migrating to Sponge
+迁移到 Sponge
 ===================
 
-The purpose of the articles within this section is to help current server owners to migrate from other server platforms
-to Sponge.
+本文内容旨在帮助服主将服务器从其它平台迁移到 Sponge。
 
 .. only:: html
 
@@ -12,32 +11,30 @@ to Sponge.
    :local:
 
 .. warning::
-  Please backup your server files **before** migrating. In case something goes wrong, you still have your backups!
+  请在进行迁移 **之前** 备份你的服务器文件。万一出现问题，你还有你的备份！
 
-Migrating to Sponge
+迁移到 Sponge
 ===================
 
-To migrate to SpongeForge or SpongeVanilla, look at the sections below. Most instructions are identical for both,
-differences are stated below.
+下面的章节将帮助你迁移至 SpongeForge 或 SpongeVanilla。大部分指令是通用的，若有不同会有说明。
 
-Migrating from CraftBukkit or Spigot
+从 CraftBukkit 或 Spigot 迁移
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
 
-    Spigot is a modified fork of CraftBukkit.
+    Spigot 是 CraftBukkit 的一个派生修改版本。
 
-Worlds
-------
+世界存档
+--------
 
-Forge, and thus SpongeForge (and also SpongeVanilla), use the same world structure as vanilla Minecraft. Vanilla Minecraft
-places the nether (typically ``world_nether``) and the end (typically ``world_the_end``) dimensions within the
-``world`` folder. However Bukkit and Spigot *don't* use this system to save the worlds, thus migration is needed.
+Forge 与 SpongeForge（还有 SpongeVanilla）跟原版 Minecraft 使用相同的世界存档结构。原版 Minecraft
+将地狱（通常是 ``world_nether``）和末地（通常是 ``world_the_end``）维度存放在 ``world`` 文件夹里。而
+Bukkit 与 Spigot 却 *不* 使用这种世界存档机制，因此需要进行迁移。
 
-SpongeForge and SpongeVanilla provide a fully automated conversion script which converts your worlds for you.
-This is how it works:
+SpongeForge 与 SpongeVanilla 提供了一个帮助你转换世界存档的全自动转换脚本。以下是工作流程：
 
-1. Shutdown your Bukkit or Spigot server and Backup the entire folder.
+1. 关闭你的 Bukkit 或 Spigot 服务器并备份整个文件夹。
 
 #. Install SpongeForge or SpongeVanilla in the folder where you ran your old server, remove the Bukkit or Spigot jars.
    If you're unsure how you're supposed to install SpongeForge or SpongeVanilla properly, read :doc:`this <implementations/index>`.
