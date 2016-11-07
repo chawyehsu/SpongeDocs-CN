@@ -1,8 +1,8 @@
 =================
-Server Management
+服务器管理
 =================
 
-Contents
+目录
 ========
 
 .. toctree::
