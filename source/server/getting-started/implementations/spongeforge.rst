@@ -1,57 +1,54 @@
 ======================
-Installing SpongeForge
+安装 SpongeForge
 ======================
 
-SpongeForge integrates `Minecraft Forge <http://www.minecraftforge.net/>`__ so you can also run Minecraft Forge mods.
-In fact, it's more like Sponge itself is a Forge mod that then loads Sponge plugins, but this is a technical detail.
+SpongeForge 集成了 `Minecraft Forge <http://www.minecraftforge.net/>`__，所以它可以运行 Minecraft Forge
+模组。事实上，Sponge 本身更像是一个 Forge 模组，继而在其上面加载 Sponge 插件，不过这是技术细节了。
 
-Users who do not want to use Minecraft Forge can consider :doc:`spongevanilla`.
+不想使用 Minecraft Forge 的用户可以考虑 :doc:`spongevanilla`。
 
-Download
+下载
 ========
 
-Check :doc:`../../../downloads` for further information.
+详情请查看 :doc:`../../../downloads` 页面。
 
-Reading the Download Filename
+读懂下载文件名
 =============================
 
-When you download SpongeForge, the name of the file will provide some important version information. It includes a
-Forge build number which this version of SpongeForge is compatible with. Other builds, even ones differing by only a
-few build numbers are not supported.
+当你下载 SpongeForge 时，文件的名称会提供一些重要的版本信息。它包含一个与该版本的 SpongeForge 兼容的 Forge
+构建版本号。其它构建，甚至是只有一小个构建版本号的不同也会是不支持的。
 
-However, SpongeForge usually updates to a new Forge build fairly soon after it's released, so you needn't
-worry about always having to run an outdated Forge version in order to use SpongeForge.
+但是，SpongeForge 通常会在新的 Forge 构建发布后快速地进行更新，所以你不必担心要为了运行 SpongeForge
+而必须运行过时的 Forge 版本。
 
 
-The format of the filename is ``spongeforge-{MCVersion}-{ForgeVersion}-{SpongeAPIVersion}-{SpongeBuildId}``
+文件名的格式是 ``spongeforge-{MCVersion}-{ForgeVersion}-{SpongeAPIVersion}-{SpongeBuildId}``
 
 +----------------------+----------------------------------------------------------------------------------------------+
-| ``MCVersion``        | The minecraft version. Only clients compatible with this version can connect.                |
+| ``MCVersion``        | Minecraft 版本号。只有兼容该版本的客户端才能连接。                                           |
 +----------------------+----------------------------------------------------------------------------------------------+
-| ``ForgeVersion``     | The version of Forge this file is built for. Preferably your server should run this exact    |
-|                      | version of Forge.                                                                            |
+| ``ForgeVersion``     | 构建该文件使用的 Forge 版本。最好你的服务器应该运行对应版本的 Forge。                        |
 +----------------------+----------------------------------------------------------------------------------------------+
-| ``SpongeAPIVersion`` | The version of the SpongeAPI implemented by this file. This is what Sponge plugins depend on.|
+| ``SpongeAPIVersion`` | 该文件实现的 SpongeAPI 版本。这是 Sponge 插件的依赖。                                        |
 +----------------------+----------------------------------------------------------------------------------------------+
-| ``SpongeBuildId``    | The build number of Sponge. This is what you should supply when reporting bugs or seeking    |
-|                      | support.                                                                                     |
+| ``SpongeBuildId``    | Sponge 的构建版本号。当你要反馈漏洞或寻求支持时应该提供的。                                  |
 +----------------------+----------------------------------------------------------------------------------------------+
 
-Example
+例子
 ~~~~~~~
 
-The file name ``spongeforge-1.8-1577-3.0.0-BETA-1000.jar`` is compatible with minecraft version ``1.8``, requires build
-``1.8-11.14.4.1577`` of Forge, provides SpongeAPI ``3.0.0`` and was build ``1000`` of SpongeForge.
+文件名为 ``spongeforge-1.8-1577-3.0.0-BETA-1000.jar`` 兼容 Minecraft ``1.8`` 版本，需要 ``1.8-11.14.4.1577``
+版本的 Forge，提供了 ``3.0.0`` 版本的 SpongeAPI 以及这是 SpongeForge 的第 ``1000`` 次构建。
 
 .. note::
 
-    Normal Forge mods can usually run on any build of Forge for a given minecraft version (e.g. 1.8.0) without
-    any problems. However, SpongeForge needs to access, among other things, internal parts of Forge, which
-    most mods shouldn't be touching, let alone modifying as Sponge does. Since Forge is free to change internal
-    code whenever they want to, its normal guarantee of backwards-compatibility doesn't apply to SpongeForge.
+    一般的 Forge 模组通常能在指定的 Minecraft 版本（例如 1.8.0）下的任意一个 Forge
+    构建中无错运行。然而，SpongeForge 除了其它方面外还需要访问 Forge
+    的内部，这对于大多数模组而言是不应该触及的，更别说像 Sponge 那样进行修改。而 Forge
+    只要想修改内部代码就可以自由地进行，所以其正常的向后兼容保证并不适用于 SpongeForge。
 
 
-Installing SpongeForge
+安装 SpongeForge
 ======================
 
 .. note::
@@ -65,7 +62,7 @@ Installing SpongeForge
   requires **at least** ``1.8.0_40`` or above to run properly. You can grab the Launcher without included Java here:
   `official Minecraft Launcher <https://minecraft.net/download>`_
 
-Single Player / In-Game LAN Servers
+单人游戏 / 游戏内局域网服务器
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Download the Minecraft Forge installer from the `Minecraft Forge website <http://files.minecraftforge.net/>`_. Make
@@ -81,7 +78,7 @@ Single Player / In-Game LAN Servers
 Next, learn how you can :doc:`configure Sponge <../configuration/index>` and how to
 :doc:`manage your instance of Sponge </server/management/index>` (including installing plugins).
 
-Dedicated Servers
+独立服务器
 ~~~~~~~~~~~~~~~~~
 
 .. note::
@@ -89,7 +86,7 @@ Dedicated Servers
     If you already have a Forge server, just put the Sponge mod into your ``mods`` folder. Remember to update your Forge
     version to match the one that :doc:`sponge requires <spongeforge>`.
 
-Installing Forge via Commandline
+通过命令行安装 Forge
 --------------------------------
 
 1. Visit the `Minecraft Forge website <http://files.minecraftforge.net/>`_ and click "Show all downloads" to view the full
@@ -102,8 +99,8 @@ Installing Forge via Commandline
 #.  Continue to Adding SpongeForge to Forge below.
 
 
-Installing Forge via GUI
-------------------------
+通过图形用户界面安装 Forge
+--------------------------
 
 1. Download the Minecraft Forge installer from the `Minecraft Forge website <http://files.minecraftforge.net/>`_ for the version
    matching the one listed :doc:`in the filename of the SpongeForge download <spongeforge>`.
@@ -112,7 +109,7 @@ Installing Forge via GUI
 #. Continue to Adding SpongeForge to Forge below.
 
 
-Adding SpongeForge to Forge
+添加 SpongeForge 到 Forge
 ---------------------------
 
 1. Download SpongeForge from the Sponge website and put it into the ``mods`` folder in your server directory.
@@ -124,8 +121,8 @@ Next, learn how you can create and use a :doc:`launch-script <../launch-script>`
 :doc:`configure Sponge <../configuration/index>` and :doc:`manage your server
 </server/management/index>` (including installing plugins).
 
-Links
+链接
 =====
 
-* `Homepage <http://spongepowered.org/>`__
+* `主页 <http://spongepowered.org/>`__
 * `GitHub <https://github.com/SpongePowered/SpongeForge>`__

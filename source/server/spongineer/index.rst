@@ -1,8 +1,8 @@
 =============================
-Becoming an Expert Spongineer
+成为 Sponge 工程师专家
 =============================
 
-Contents
+目录
 ========
 
 .. toctree::

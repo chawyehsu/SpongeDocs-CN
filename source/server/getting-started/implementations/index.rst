@@ -1,41 +1,43 @@
 ==========================
-Choosing an Implementation
+选择一个实现
 ==========================
 
-Something that runs Sponge plugins is called an *implementation*. As long as a plugin is correctly made using the
-SpongeAPI, it should run correctly on any sufficiently-complete implementation.
+*实现* 就是运行 Sponge 插件的载体。只要是正确地使用 ``SpongeAPI``
+开发出来的插件，就应该能在任何一个充分完整的实现上正确地运行。
 
-Minecraft can't run Sponge plugins out of the box, but you can modify it to do so.
+Minecraft 不能开箱即用地运行 Sponge 插件，但修改后可以。
 
-The Sponge API itself is an `open standard <https://github.com/SpongePowered/SpongeAPI>`__.
+Sponge API 本身是一个 `开放式标准 <https://github.com/SpongePowered/SpongeAPI>`__。
 
-Available Implementations
+可用的实现
 =========================
 
-There are currently two implementations:
+目前有两种实现：
 
 +--------------------------------------+--------------------------------------------------+
-| Name                                 | Based on                                         |
+| 名称                                 | 基于                                             |
 +======================================+==================================================+
-| :doc:`SpongeForge <spongeforge>`     | Mojang's "vanilla" Minecraft and Minecraft Forge |
+| :doc:`SpongeForge <spongeforge>`     | Mojang 的原版 Minecraft 以及 Minecraft Forge     |
 +--------------------------------------+--------------------------------------------------+
-| :doc:`SpongeVanilla <spongevanilla>` | Mojang's "vanilla" Minecraft                     |
+| :doc:`SpongeVanilla <spongevanilla>` | Mojang 的原版 Minecraft                          |
 +--------------------------------------+--------------------------------------------------+
 
 
-Which do I choose?
+我应该选择哪一个？
 ~~~~~~~~~~~~~~~~~~
 
-If you want to run MinecraftForge mods or you prefer to use Sponge in singleplayer, then choose :doc:`spongeforge`.
+如果你想要运行依赖 MinecraftForge 的模组，或者你希望在单人游戏下使用
+Sponge，那么请选择 :doc:`SpongeForge <spongeforge>`。
 
-If you only want to run a Mincraft server with plugins on it (but no mods), then you can choose :doc:`SpongeForge <spongeforge>` or
-:doc:`SpongeVanilla <spongevanilla>`. SpongeForge supports vanilla clients, as long as you don't install Forge mods which require
-clientside mods. If you prefer to run a server without Forge, then SpongeVanilla is your preferred option.
+如果你只想在 Mincraft 服务器上使用插件（不使用模组），那么你可以选择
+:doc:`SpongeForge <spongeforge>` 或 :doc:`SpongeVanilla
+<spongevanilla>`。SpongeForge 支持原版客户端，只要你不安装那些需要客户端模组的 Forge
+模组。如果你更喜欢运行没有 Forge 的服务器，那么 SpongeVanilla 会是你的首选。
 
-SpongeVanilla and SpongeForge (without mods) behave the same, so the decision between the two is a matter of preference,
-not a choice of functionality or features.
+SpongeVanilla 和
+SpongeForge（没有模组时）的行为相同，所以在两者之间选择是见仁见智的问题，而不是因功能或特性而进行选择。
 
-Contents
+目录
 ========
 
 .. toctree::
