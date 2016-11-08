@@ -1,48 +1,47 @@
 ==================
-Installing Plugins
+安装插件
 ==================
 
-What Are Plugins
+插件是什么
 ================
 
-Plugins are files written in Java that change the way the server works, generally adding features. They allow server
-owners to do a lot of modifications, such as adding an economy system, managing teleports and permissions, etc.
+插件是使用 Java
+编写的改变服务器工作方式的文件，通常是增加特性。插件允许服主对做出许多修改，如添加经济系统，管理传送和权限等。
 
-Finding Plugins
+寻找插件
 ===============
 
 .. warning::
-    Do not download plugins from untrustworthy sources! Malicious plugins can be used to give others unauthorized access
-    to your server or computer.
+    不要从不可信的源下载插件！恶意插件可以让他人未授权访问你的你的服务器或者计算机。
 
-Installation
+安装
 ============
 
 SpongeForge
 ~~~~~~~~~~~
 
-In order to install plugins, place them into the "mods" folder of your game or server directory.
+要安装插件，需将插件放在你的游戏或服务器的 ``mods`` 文件夹下。
 
-If your download came in a .zip file, then you may need to extract it to find a .jar file inside.
+如果你下载的是一个 .zip 文件，那么你可能需要将它内部的 .jar 文件解压出来。
 
 SpongeVanilla
 ~~~~~~~~~~~~~
 
-.. note:: For consistency between SpongeForge and SpongeVanilla, plugins are stored in the mods directory on SpongeVanilla.
+.. note:: 为了保持 SpongeForge 和 SpongeVanilla 之间的一致性，SpongeVanilla 的插件也放在 mods 文件夹中。
 
-In order to install plugins, place them into the "mods" folder of your game or server directory.
+要安装插件，需将插件放在你的游戏或服务器的 ``mods`` 文件夹下。
 
-If your download came in a .zip file, then you may need to extract it to find a .jar file inside.
+如果你下载的是一个 .zip 文件，那么你可能需要将它内部的 .jar 文件解压出来。
 
-Common Problems
+常见问题
 ===============
 
-If you are having problems with a plugin, consider the following things:
+如果你遇到一个插件出现了问题，以下是可能的原因：
 
-* Is the plugin compatible with your Minecraft version? While Sponge tries to keep old plugins working, this is sometimes
-  not possible. In most cases, plugins based on a stable release should continue functioning without being updated.
-* Do you run a current Java version? Sponge is built for Java 8 and is known to trigger a bug in the JRE 1.8.0_40, so
-  make sure you use a version newer than that.
-* The plugin may be outdated. Is there a newer version of the plugin?
-* Does the plugin need a specific Implementation and/or Build of Sponge?  Some plugins may bypass the Sponge API, or
-  otherwise rely on details that change between versions or platforms. Check at the site you downloaded it from.
+* 该插件的版本和你的 Minecraft 版本兼容吗？尽管 Sponge
+  力图让旧的插件能正常工作，但有时这依然是不可能的。在大多数情况下，基于稳定版本的插件都能无需升级地继续工作。
+* 你运行的是最新版本的 Java 吗？Sponge 是基于 Java 8 构建的，并且已知在
+  JRE 1.8.0_40 中会触发一个 bug，所以请确保你使用比这更新的版本。
+* 插件可能已经过期。是否有新版本的插件？
+* 该插件依赖特定的 Sponge 实现与/或构建吗？某些插件可能绕过了
+  Sponge API，或者依赖了会随版本或平台改变的底层内容。从你下载该插件的网站中查找相关信息。
