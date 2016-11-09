@@ -53,73 +53,68 @@ SpongeForge 集成了 `Minecraft Forge <http://www.minecraftforge.net/>`__，所
 
 .. note::
 
-    If you use (or are planning to use) a game server host, they may have a control panel that can install Sponge for you.
+    如果你正在使用（或打算使用）游戏服务器托管，那或许会有能让你安装 Sponge 的控制面板。
 
 
 .. warning::
-  When using the Mojang installer, Mojang makes use of their own Java version and not the one you installed on your
-  system. The installer currently ships with Java ``1.8.0_25`` for Windows and ``1.8.0_60`` for OSX. Note that Sponge
-  requires **at least** ``1.8.0_40`` or above to run properly. You can grab the Launcher without included Java here:
-  `official Minecraft Launcher <https://minecraft.net/download>`_
+  当你使用 Mojang 的安装程序时，Mojang 会使用他们自己的 Java
+  版本而不会使用你的系统中安装的版本。安装程序目前为 Windows 附带了
+  Java ``1.8.0_25`` 版本和为 OSX 附带了 Java ``1.8.0_60`` 版本。注意
+  Sponge **最低** 需要 ``1.8.0_40`` 或更高版本才能正确地运行。你可以从这里获取不包含
+  Java 的启动器：`官方 Minecraft 启动器 <https://minecraft.net/download>`_。
 
 单人游戏 / 游戏内局域网服务器
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Download the Minecraft Forge installer from the `Minecraft Forge website <http://files.minecraftforge.net/>`_. Make
-   sure to use **exactly the same build number** as :doc:`the one listed in the filename of the Sponge download
-   <spongeforge>`.
-#. Run the provided Forge installer. A new Forge profile will be created in the Minecraft launcher.
-#. Open the Minecraft launcher, and select the new Forge profile.
-#. Click "Options" and click "Open Game Dir".
-#. Download SpongeForge from the Sponge website and put it into the ``mods`` folder. Create the folder if it does
-   not yet exist.
-#. Sponge should work in both in single player and if you open your world to LAN.
+1. 从 `Minecraft Forge 网站 <http://files.minecraftforge.net/>`_ 下载 Minecraft Forge
+   安装程序。确保使用的是与 :doc:`下载的 Sponge 的文件名中列出的 <spongeforge>` **完全相同的构建版本号**。
+#. 运行 Forge 安装程序。Minecraft 启动器中会创建一个新的 Forge 配置（profile）。
+#. 打开 Minecraft 启动器，选择这个新的 Forge 配置。
+#. 点击 "Options" 并点击 "Open Game Dir"。
+#. 从 Sponge 网站下载 SpongeForge 并放入 ``mods`` 文件夹中。如果文件夹不存在则创建它。
+#. Sponge 应该已经能在单人游戏以及局域网工作了。
 
-Next, learn how you can :doc:`configure Sponge <../configuration/index>` and how to
-:doc:`manage your instance of Sponge </server/management/index>` (including installing plugins).
+下一步，学习如何 :doc:`配置 Sponge <../configuration/index>` 与
+:doc:`管理 Sponge 实例 </server/management/index>` （包括安装插件）。
 
-独立服务器
+专用服务器
 ~~~~~~~~~~~~~~~~~
 
 .. note::
 
-    If you already have a Forge server, just put the Sponge mod into your ``mods`` folder. Remember to update your Forge
-    version to match the one that :doc:`sponge requires <spongeforge>`.
+    如果你已经拥有 Forge 服务器了，则只需将 Sponge 模组放入 ``mods``
+    文件夹中。记住要将你的 Forge 更新到与 :doc:`sponge 要求 <spongeforge>` 相匹配的版本。
 
 通过命令行安装 Forge
 --------------------------------
 
-1. Visit the `Minecraft Forge website <http://files.minecraftforge.net/>`_ and click "Show all downloads" to view the full
-   set of available options. Identify the version matching the one listed :doc:`in the filename of the SpongeForge download
-   <spongeforge>`, and hover over the (i) next to "Installer" to get the direct download link.
-#. Use your favorite download method to download the jar to its destination.
-   Example: ``wget http://url.to/forge-version-installer.jar``
-#. From the folder in which you wish to install Forge, execute the jar with the ``--installServer`` option. Example:
-   ``java -jar forge-version-installer.jar --installServer``
-#.  Continue to Adding SpongeForge to Forge below.
+1. 访问 `Minecraft Forge 网站 <http://files.minecraftforge.net/>`_ 并点击 "Show all downloads"
+   查看可用项的完整列表。确定一个与 :doc:`下载的 Sponge 的文件名中 <spongeforge>`
+   列出的相匹配的版本，然后将鼠标悬停在 "Installer" 旁边的 (i) 上获取下载直链。
+#. 用你最喜欢的下载方式将 jar 下载到相应位置。例如：``wget http://url.to/forge-version-installer.jar``
+#. 在你希望安装 Forge 的文件夹中，用 ``--installServer`` 选项执行
+   jar。例如：``java -jar forge-version-installer.jar --installServer``
+#. 按下文继续将 SpongeForge 添加到 Forge 中。
 
 
 通过图形用户界面安装 Forge
 --------------------------
 
-1. Download the Minecraft Forge installer from the `Minecraft Forge website <http://files.minecraftforge.net/>`_ for the version
-   matching the one listed :doc:`in the filename of the SpongeForge download <spongeforge>`.
-#. Run the provided Forge installer, select "Install Server", choose an empty folder to place the server's files,
-   and then click OK.
-#. Continue to Adding SpongeForge to Forge below.
+1. 从 `Minecraft Forge 网站 <http://files.minecraftforge.net/>`_ 下载与
+   :doc:`下载的 Sponge 的文件名中 <spongeforge>` 列出的相匹配的版本的 Minecraft Forge 安装程序。
+#. 运行 Forge 安装程序，选择 "Install Server"，选择一个空文件夹来放服务端文件，点击 OK。
+#. 按下文继续将 SpongeForge 添加到 Forge 中。
 
 
 添加 SpongeForge 到 Forge
 ---------------------------
 
-1. Download SpongeForge from the Sponge website and put it into the ``mods`` folder in your server directory.
-   Create the folder if it does not yet exist.
-#. You may now launch the server via command or launch script ``java -jar forge-version-XYZ.jar``.
-#. If operating from home, set up :doc:`../port-forward` to ensure others can connect.
+1. 从 Sponge 网站下载 SpongeForge 并放入你的服务端目录的 ``mods`` 文件夹中。如果文件夹不存在则创建它。
+#. 现在你可以通过命令行或者启动脚本 ``java -jar forge-version-XYZ.jar`` 启动服务端了。
+#. 如果是在家庭中操作的，配置 :doc:`../port-forward` 来确保其他人能够连接。
 
-Next, learn how you can create and use a :doc:`launch-script <../launch-script>`,
-:doc:`configure Sponge <../configuration/index>` and :doc:`manage your server
-</server/management/index>` (including installing plugins).
+下一步，学习如何 :doc:`配置 Sponge <../configuration/index>` 与
+:doc:`管理 Sponge 实例 </server/management/index>` （包括安装插件）。
 
 链接
 =====
