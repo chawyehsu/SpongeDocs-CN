@@ -1,34 +1,33 @@
 =====================
-Introduction to HOCON
+HOCON 简介
 =====================
 
-HOCON (Human-Optimized Config Object Notation) is an easy-to-use configuration format. It is used by Sponge and
-individual plugins utilizing the Sponge API to store important data, such as configuration or player data. HOCON files
-typically use the suffix ``.conf``.
+HOCON（Human-Optimized Config Object Notation）是一个易于使用的配置格式。Sponge 以及利用了
+Sponge API 的独立插件使用它来储存重要的数据，比如配置或者玩家数据。HOCON 文件通常使用 ``.conf`` 后缀。
 
-Components
+组件
 ===========
 
-* a ``key`` is a string preceding a value
-* a ``value`` is a string, number, object, array, or boolean following a ``key``
-* a ``key-value separator`` separates keys from values, and can be either ``:`` or ``=``
-* a ``comment`` is prefixed with ``#`` or ``//``, typically serving to provide feedback or instructions
+* ``key`` 是 value 前面的一个字符串
+* ``value`` 是 ``key`` 后面的一个字符串、数字、对象、数组或者布尔值
+* ``key-value separator`` 把 key 和 value 分开，可以是 ``:`` 或者 ``=``
+* ``comment`` 以 ``#`` 或者 ``//`` 开头，通常用于提供反馈或者说明
 
-**Example:**
+**示例：**
 
 .. code-block:: json
 
       yellow-thing: "Sponge"
 
-In this example, the ``key`` is ``yellow-thing``, the ``value`` is ``Sponge``, and the ``key-value separator`` is ``:``.
+在这一示例中， ``key`` 是 ``yellow-thing``，``value`` 是 ``Sponge``，而 ``key-value separator`` 则是 ``:``。
 
-Working with HOCON
+使用 HOCON
 ==================
 
-HOCON is more flexible than the JSON (JavaScript Object Notation) format in that there are several ways to write valid
-HOCON. Below are two examples of valid HOCON.
+HOCON 比 JSON（JavaScript Object Notation）格式更灵活，书写一个合法的
+HOCON 有多种方式。下面是两个合法的 HOCON 示例。
 
-**Example #1:**
+**示例一：**
 
 .. code-block:: none
 
@@ -37,7 +36,7 @@ HOCON. Below are two examples of valid HOCON.
         level: 30
     }
 
-**Example #2:**
+**示例二：**
 
 .. code-block:: none
 
@@ -46,20 +45,19 @@ HOCON. Below are two examples of valid HOCON.
         level = 30
     }
 
-In practice, it is best to follow the formatting conventions of the HOCON configuration you are editing. When editing
-a HOCON configuration for Sponge or an individual plugin utilizing the Sponge API, the values are likely the only thing
-you will be changing unless otherwise specified.
+在实际使用中，最好遵守你正在编辑的 HOCON 配置的格式约定。在编辑 Sponge 或者利用了 Sponge API
+的独立插件的 HOCON 配置文件时，你可能修改的应只有 value，除非另有指定。
 
-Debugging your configuration
+调试你的配置
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If a HOCON configuration does not appear to be working, here are some tips.
+如果一个 HOCON 配置文件似乎不工作，这里有一些小提示。
 
-* Curly braces must be balanced
-* Quotation marks must be balanced
-* Duplicate keys that appear later take precedence
+* 必须匹配花括号
+* 必须引号匹配
+* 重复的键后一个优先
 
-Specification
+规范
 =============
 
-More information about the HOCON format can be found `here <https://github.com/typesafehub/config/blob/master/HOCON.md>`__.
+在 `这里 <https://github.com/typesafehub/config/blob/master/HOCON.md>`__ 可以找到有关 HOCON 格式的更多信息。

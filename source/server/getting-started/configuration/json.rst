@@ -1,9 +1,8 @@
 ===========
-JSON Syntax
+JSON 语法
 ===========
 
-This is an example of a ``whitelist.json`` file with correct formatting (although the UUID-s are fictional). Your file
-should follow the same syntax.
+这是一个使用了正确格式的 ``whitelist.json`` 文件示例（虽然 UUID 是虚构的）。你的文件应遵循一致的语法。
 
 .. code-block:: json
 
@@ -18,14 +17,13 @@ should follow the same syntax.
     }
   ]
 
-Format Rules
+语法规则
 ~~~~~~~~~~~~
 
-- Square braces (``[]``) open and close the file
-- Each entry in the file is wrapped with curly braces (``{}``)
-- Each key and its corresponding value is typed on its own line
-- If more than one exists, both entries and key/value pairs are comma separated
-- All strings are in quotation marks
-- UUID-s are 32 symbols long, and written in hexadecimal (0-9, a-f).
-- the UUID symbols are grouped. First is a group of 8, then three groups of 4, then a group of 12. The groups are
-  separated by dashes (``-``)
+- 方括号（``[]``）闭合文件
+- 文件中的每一个条目使用花括号（``{}``）包裹起来
+- 每一个键和它对应的值在同一行上
+- 如果存在多个，条目以及键值对之间使用逗号分隔
+- 所有字符串在引号内
+- UUID 为 32 字符长，并且使用十六进制（0-9，a-f）书写。
+- UUID 的字符是分组的。第一组 8 个，后三组 4 个，之后一组 12 个，组之间用短横线（``-``）分隔
