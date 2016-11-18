@@ -1,54 +1,44 @@
 ========
-Commands
+命令
 ========
 
-Commands are one method in which server operators can administer their server, and in which players can interact with
-the server.
+服务器管理员可以使用命令来管理他们的服务器，而玩家则可以通过命令与服务器进行交互。
 
-In Sponge, commands follow a system of permissions. Permissions allow server operators to control who can access what
-commands. By default, all commands are granted to players with OP status. Players without operator status do not have
-access to administrative commands or commands that require an assigned permission node. A server operator can fine-tune
-who can access what commands by adding/negating permission nodes through a permissions plugin.
+在 Sponge 中，命令遵循权限系统。权限允许服务器管理员控制哪些人可以使用哪些命令。默认情况下会将所有命令授予给
+OP 身份的玩家。没有管理员身份的玩家无法使用管理员命令或者那些需要分配权限节点的命令。服务器
+管理员可以通过权限插件添加/取消权限节点来调整谁可以使用哪些命令。
 
 .. note::
 
-    Sponge is not a permissions-management plugin. To add and negate permissions for individual players or groups, you
-    will need to find a permissions-management plugin.
+    Sponge 不是一个权限管理插件。要添加和取消个别玩家或组的权限，你需要找一个权限管理插件。
 
-Operator Commands
+管理员命令
 =================
 
-These commands, in addition to regular player commands, are available to server operators.
+这些命令，额外于普通玩家命令，对服务器管理员可用。
 
 Sponge
 ~~~~~~
 
-The following commands are available to players with operator status (or the correct permission node) on servers powered
-by Sponge.
+以下命令在由 Sponge 驱动的服务器中对具有管理员身份（或正确权限节点）的玩家可用。
 
 ====================  ========================================  ======================
-Command               Description                               Permission
+命令                  描述                                      权限
 ====================  ========================================  ======================
-/sponge audit         Forces loading of unloaded classes to     sponge.command.audit
-                      enable mixin debugging.
-/sponge chunks        Prints out the chunk data for a world, a  sponge.command.chunks
-                      dimension, or globally.
-/sponge config        Alters a global, world, or a dimension    sponge.command.config
-                      config.
-/sponge heap          Dumps the JVM heap.                       sponge.command.heap
-/sponge plugins       Lists currently installed plugins.        sponge.command.plugins
-/sponge reload        Reloads the global, world, or dimension   sponge.command.reload
-                      config.
-/sponge save          Saves the global, world, or dimension     sponge.command.save
-                      config.
-/sponge version       Prints the Sponge/SpongeAPI versions to   sponge.command.version
-                      the console.
-/sponge timings       The main command for the timings module.  sponge.command.timings
+/sponge audit         强制载入未载入的类以启用 Mixin 调试。     sponge.command.audit
+/sponge chunks        打印世界、维度或全局的区块信息。          sponge.command.chunks
+/sponge config        改变全局、世界或维度的配置。              sponge.command.config
+/sponge heap          转储 JVM 堆。                             sponge.command.heap
+/sponge plugins       列出当前已安装的插件。                    sponge.command.plugins
+/sponge reload        重新载入全局、世界或维度的配置。          sponge.command.reload
+/sponge save          保存全局、世界或维度的配置。              sponge.command.save
+/sponge version       在控制台打印 Sponge/SpongeAPI 的版本。    sponge.command.version
+/sponge timings       timings 模块的主命令。                    sponge.command.timings
 ====================  ========================================  ======================
 
 |
 
-**Sponge Command Parameters**
+**Sponge 命令参数**
 
 * /sponge chunks [-g] [-d dim] [-w world]
 * /sponge config [-g] [-d dim] [-w world] key value
@@ -57,141 +47,131 @@ Command               Description                               Permission
 
 .. note::
 
-    The ``/sponge audit`` command forces loading of any classes which have not yet been loaded, allowing the full output
-    from all mixin debugging environment variables to be captured. This also requires the mixins.checks variable, see
-    the `Mixin wiki <https://github.com/SpongePowered/Mixin/wiki/Mixin-Java-System-Properties>`__ for more information.
+    ``/sponge audit`` 命令强制载入所有未被载入的类，并允许采集 Mixin
+    调试环境中所有变量的完整输出。这同时需要 mixins.checks 变量，更多信息见 `Mixin wiki
+    <https://github.com/SpongePowered/Mixin/wiki/Mixin-Java-System-Properties>`__。
 
 .. tip::
 
-    Here are a few simple examples of the sponge config command in action. Please see
-    :doc:`../getting-started/configuration/index` for a more detailed explanation.
+    这里是几个运行 sponge config 命令的简单示例。请查阅
+    :doc:`../getting-started/configuration/index` 以获取更详细的解释。
 
     a. ``/sponge config logging.chunk-load true``
 
-      Since no dimension was specified, the dimension would default to the sender(player) dimension. So if you were in a
-      mystcraft dimension, this would alter the mystcraft dimension config.
+      由于未指定维度，默认将使用命令发送者（玩家）的维度。因此如果你在 mystcraft
+      维度，这将会改变 mystcraft 维度的配置。
 
     b. ``/sponge config -d nether logging.chunk-load true``
 
-    Since a dimension type was specified, this would alter the nether dimension config (and hence all nether worlds).
+    由于指定了维度，这将改变下界维度的配置（所有的下界世界）。
 
     c. ``/sponge config -w DIM1 logging.chunk-load true``
 
-    This would alter the config of world named DIM1.
+    这将改变名为 DIM1 的世界的配置。
 
 Timings
 ~~~~~~~
 
-Timings are a tool built into Sponge that allows server administrators to monitor the performance of their server.
-Timings will collect information about a server so that a report may later be generated on the data. Information that
-is recorded by timings include the server motd, version, uptime, memory, installed plugins, tps, percent of tps loss,
-amount of players, tile entities, entities, and chunks.
-Below is a list of sub-commands to ``/sponge timings``:
+Timings 是一个内置在 Sponge 中的工具，允许服务器管理员监视他们的服务器的性能。Timings
+将收集有关服务器的信息以在后续基于这些数据生成一份报告。由 Timings 记录的信息包括服务器的
+motd、版本、在线时间、内存、安装的插件、tps、tps 丢失百分比，玩家数量、tile
+entities、实体以及区块。以下是 ``/sponge timings`` 的子命令列表：
 
 ========================  ========================================
-Command                   Description
+命令                      描述
 ========================  ========================================
-/sponge timings on        Enables timings. Note that this will
-                          also reset timings data.
-/sponge timings off       Disables timings. Note that most timings
-                          commands will not function and timings
-                          will not be recorded if timings are
-                          disabled.
-/sponge timings reset     Resets all timing data and begins
-                          recording timing data after the time
-                          this command was done.
-/sponge timings report    Generates the timings report on your
-                          server performance at
-                          http://timings.aikar.co
-/sponge timings verbon    Enables timings monitoring at the
-                          verbose level.
-/sponge timings verboff   Disables timings monitoring at the
-                          verbose level. Note that high-frequency
-                          timings will not be available.
-/sponge timings cost      Gets the cost of using timings.
+/sponge timings on        启用 Timings。注意这将同时重置 Timings
+                          数据。
+/sponge timings off       禁用 Timings。注意 Timings 禁用后大部分
+                          Timings 命令将无法使用同时 Timings
+                          将不会进行记录工作。
+/sponge timings reset     重置所有 Timings
+                          数据并在此命令结束后开始记录 Timings 数据。
+/sponge timings report    在 http://timings.aikar.co
+                          上生成你的服务器性能 Timings 报告。
+/sponge timings verbon    启用详细信息级别的 Timings 监控。
+/sponge timings verboff   禁用详细信息级别的 Timings
+                          监控。注意高频 Timings 将不可用。
+/sponge timings cost      获取使用 Timings 时的消耗。
 ========================  ========================================
 
 Forge
 ~~~~~
 
-The following commands are available only when using the SpongeForge coremod on Forge. Other implementations of the
-Sponge API, such as SpongeVanilla, do not include these commands.
+以下命令只有在 Forge 中使用了 SpongeForge coremod
+才可用。Sponge API 的其它实现，如 SpongeVanilla，不包含这些命令。
 
 ====================  ========================================  ====================
-Command               Description                               Permission
+命令                  描述                                      权限
 ====================  ========================================  ====================
-/forge tps            Display ticks per second for each world.  forge.command.forge
-/forge track          Enable tile entity tracking.              forge.command.forge
+/forge tps            显示每个世界的 TPS。                      forge.command.forge
+/forge track          开启 Tile Entity 跟踪。                   forge.command.forge
 ====================  ========================================  ====================
 
 |
 
-For any Forge mods that use the vanilla command API, command permissions are provided in the form ``<modid>.command.<commandname>``.
+为了让所有的 Forge 模组可以使用原版命令 API，命令权限以 ``<modid>.command.<commandname>`` 的形式提供。
 
 
-Vanilla
+原版
 ~~~~~~~
 
-There are several commands built-in to vanilla Minecraft that are also available on servers powered by Sponge. The list
-below is not comprehensive, but it includes the most commonly used commands. These commands are available to players with
-operator status (or the correct permission node). In general, permissions for vanilla Minecraft commands on a Sponge
-server are of the structure ``minecraft.command.<command>``, as shown below.
+原版 Minecraft 中内建的一些命令在由 Sponge 驱动的服务器中也可用。以下列表并不全面，但包含了最常用的命
+令。这些命令对有管理员身份（或正确权限节点）的玩家可用。一般情况下，Sponge 服务器中的原版 Minecraft
+命令权限的结构是 ``minecraft.command.<command>``，如下所示。
 
 ====================  ========================================  ================================
-Command               Description                               Permission
+命令                  描述                                      权限
 ====================  ========================================  ================================
-/ban                  Ban a player.                             minecraft.command.ban
-/ban-ip               Ban a player's IP address.                minecraft.command.ban-ip
-/banlist              View all banned players.                  minecraft.command.banlist
-/clear                Clear an inventory.                       minecraft.command.clear
-/deop                 Remove OP from a player.                  minecraft.command.deop
-/difficulty           Set the game difficulty.                  minecraft.command.difficulty
-/gamemode             Set the gamemode of a player.             minecraft.command.gamemode
-/gamerule             Set a gamerule.                           minecraft.command.gamerule
-/give                 Give an item to a player.                 minecraft.command.give
-/kill                 Kill a player or entity.                  minecraft.command.kill
-/op                   Give Operator status to a player.         minecraft.command.op
-/pardon               Remove a player from the ban list.        minecraft.command.pardon
-/save-all             Save the server.                          minecraft.command.save-all
-/save-off             Disable automatic server saving.          minecraft.command.save-off
-/save-on              Enable automatic server saving.           minecraft.command.save-on
-/setidletimeout       Define how long players can be idle       minecraft.command.setidletimeout
-                      before getting kicked.
-/setworldspawn        Set the spawnpoint for the world.         minecraft.command.setworldspawn
-/stop                 Stop the server.                          minecraft.command.stop
-/toggledownfall       Toggle between sunny and rainy weather.   minecraft.command.toggledownfall
-/tp                   Teleport players and entities.            minecraft.command.tp
-/weather              Set the weather to a defined condition.   minecraft.command.weather
-/whitelist            Manage the server whitelist.              minecraft.command.whitelist
-/worldborder          Manage the world border.                  minecraft.command.worldborder
+/ban                  封禁玩家。                                minecraft.command.ban
+/ban-ip               封禁玩家的 IP 地址。                      minecraft.command.ban-ip
+/banlist              查看所有被封禁的玩家。                    minecraft.command.banlist
+/clear                清空背包。                                minecraft.command.clear
+/deop                 移除玩家的 OP 身份。                      minecraft.command.deop
+/difficulty           设置游戏难度。                            minecraft.command.difficulty
+/gamemode             设置玩家的游戏模式。                      minecraft.command.gamemode
+/gamerule             设置游戏规则。                            minecraft.command.gamerule
+/give                 给予玩家物品。                            minecraft.command.give
+/kill                 杀死玩家或实体。                          minecraft.command.kill
+/op                   给予玩家管理员身份。                      minecraft.command.op
+/pardon               将玩家从封禁列表中移除。                  minecraft.command.pardon
+/save-all             存档服务器。                              minecraft.command.save-all
+/save-off             禁用服务器自动存档。                      minecraft.command.save-off
+/save-on              启用服务器自动存档。                      minecraft.command.save-on
+/setidletimeout       定义玩家空闲多少 tick 后被踢出。          minecraft.command.setidletimeout
+/setworldspawn        设置世界的出生点。                        minecraft.command.setworldspawn
+/stop                 关闭服务器。                              minecraft.command.stop
+/toggledownfall       切换晴天和雨天。                          minecraft.command.toggledownfall
+/tp                   传送玩家或实体。                          minecraft.command.tp
+/weather              定义条件设置天气。                        minecraft.command.weather
+/whitelist            管理服务器白名单。                        minecraft.command.whitelist
+/worldborder          管理世界边境。                            minecraft.command.worldborder
 ====================  ========================================  ================================
 
 |
 
-In addition, there are two permissions created by Sponge for controlling the ability to edit commandblocks. Note that
-this permission uses the actual *name* of the commandblock, which is normally ``@`` by default.
+此外，Sponge 创建了两个用于控制编辑命令方块能力的权限。注意该权限使用命令方块的实际 *名字*，默认是 ``@``。
 
-* Allow editing an ordinary commandblock of the given name: minecraft.commandblock.edit.block.<name>
-* Allow editing a minecart commandblock of the given name: minecraft.commandblock.edit.minecart.<name>
+* 允许编辑给定名字的普通的命令方块：minecraft.commandblock.edit.block.<name>
+* 允许编辑给定名字的命令方块矿车：minecraft.commandblock.edit.minecart.<name>
 
 
-Player Commands
+玩家命令
 ===============
 
-The following commands are available as part of vanilla Minecraft to players without operator status.
+以下是原版 Minecraft 的部分命令，对没有管理员身份的玩家可用。
 
 ====================  ========================================  ======================
-Command               Description                               Permission
+命令                  描述                                      权限
 ====================  ========================================  ======================
-/help                 View information on commands used on the  minecraft.command.help
-                      server
-/me                   Tell everyone what you are doing.         minecraft.command.me
-/say                  Display a message to everyone (or, if     minecraft.command.say
-                      using selectors, specific players).
-/tell                 Privately message another player.         minecraft.command.tell
+/help                 查看服务器内可用命令的信息                minecraft.command.help
+/me                   告诉所有人你在正在做什么。                minecraft.command.me
+/say                  向所有人显示一条消息。（如使用了选择器，  minecraft.command.say
+                      则指定玩家）。
+/tell                 向其他玩家发送私密消息。                  minecraft.command.tell
 ====================  ========================================  ======================
 
 |
 
-A full list of vanilla commands can be found at: http://minecraft.gamepedia.com/Commands#List_of_commands. Permissions
-for vanilla Minecraft commands on a Sponge server are of the structure ``minecraft.command.<command>``.
+原版命令的完整列表可以在这里找到：http://minecraft.gamepedia.com/Commands#List_of_commands。在 Sponge
+服务器中原版 Minecraft 命令权限的结构是 ``minecraft.command.<command>``。
