@@ -1,24 +1,23 @@
 ========================
-Creating a Launch Script
+创建启动脚本
 ========================
 
 .. note::
 
-    These instructions apply only if you plan to run your Minecraft server on your own machine. Most shared Minecraft
-    hosts will create a launch script for you.
+    这些说明只在你打算在你自己的机器上运行你的 Minecraft 服务器时适用。大多数共享 Minecraft 主机会为你创建启动脚本。
 
-Writing a Launch Script
+编写启动脚本
 =======================
 
-First, open a text editor such as Atom, Sublime Text, or Notepad. Write (or paste) a launch script for your server.
-Examples of simple launch scripts for Windows, Mac OS X, and Linux have been provided below. Keep the RAM limitations
-of your machine in mind.
+首先，打开一个文本编辑器，比如 Atom，Sublime Text
+或者记事本。编写（或粘贴）用于你服务器的启动脚本。Windows，Mac OS X 以及 Linux
+的启动脚本范例已在下面提供。但请谨记你的机器的内存限制。
 
 .. note::
 
-    The following examples are generic. For a Forge server using Sponge (coremod), change ``forge-1.8-XYZ-universal.jar``
-    to whatever your Forge version in the server directory is named. To launch a SpongeVanilla server, change
-    ``forge-1.8-XYZ-universal.jar`` to the name of the SpongeVanilla.jar file.
+    下面的例子是通用的。对于使用了 Sponge (coremod) 的 Forge 服务端，将 ``forge-1.8-XYZ-universal.jar``
+    修改为在你服务器目录下的任意版本 Forge 的名字。要启动 SpongeVanilla 服务端，则将
+    ``forge-1.8-XYZ-universal.jar`` 修改为 SpongeVanilla.jar 文件的名字。
 
 Windows
 ~~~~~~~
@@ -28,7 +27,7 @@ Windows
     java -Xms1G -Xmx2G -jar forge-1.8-XYZ-universal.jar
     pause
 
-Save your Windows launch script as ``launch.bat``.
+将你的 Windows 启动脚本保存为 ``launch.bat``。
 
 Mac OS X
 ~~~~~~~~
@@ -39,7 +38,7 @@ Mac OS X
     cd "$(dirname "$0")"
     java -Xms1G -Xmx2G -jar forge-1.8-XYZ-universal.jar
 
-Save your Mac launch script as ``launch.command``.
+将你的 Mac 启动脚本保存为 ``launch.command``。
 
 Linux
 ~~~~~
@@ -50,26 +49,26 @@ Linux
     cd "$(dirname "$(readlink -fn "$0")")"
     java -Xms1G -Xmx2G -jar forge-1.8-XYZ-universal.jar
 
-Save your Linux launch script as ``launch.sh``.
+将你的 Linux 启动脚本保存为 ``launch.sh``。
 
-Running a Launch Script
+运行启动脚本
 =======================
 
-Ensure you are running your launch script out of a folder created especially for your server. This is for your own
-sanity; unfortunately, Spongie is unable to soak up your tears if you do not do this.
+确保你是在特别为你的服务器创建的文件夹中运行启动脚本。这是为了你好；不幸的是，如果你不这么做，Spongie
+也没有办法吸干你的眼泪。
 
-You may run your launch script by double-clicking it. If you are using a console or terminal, navigate to the directory
-of the script and run it. Keep in mind that you must agree to the Mojang EULA in order to run a server.
+你可以通过双击它来运行你的启动脚本。如果你正在使用控制台或者终端，切换到该脚本的目录下并运行它。请记
+住，为了运行服务器你必须同意 Mojang EULA。
 
 .. note::
 
-    The default minecraft server GUI console is disabled by Sponge, because it is very processor-intensive.
+    Sponge 禁用了 Minecraft 服务端默认的 GUI 控制台，因为它太消耗处理器资源了。
 
 .. warning::
 
-    If you get a permissions error when attempting to launch your server on a Mac, try this:
+    如果你尝试在 Mac 上启动你的服务器时出现权限错误，试试这个：
 
-    * Open the Terminal.
-    * Type ``chmod a+x``, with a space at the end.
-    * Drag your launch script to the Terminal.
-    * Press enter.
+    * 打开终端。
+    * 输入 ``chmod a+x``，结尾加一个空格。
+    * 将你的启动脚本拖到终端中。
+    * 按回车键。

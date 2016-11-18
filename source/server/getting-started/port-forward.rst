@@ -1,23 +1,21 @@
 ===============
-Port Forwarding
+端口转发
 ===============
 
-If you are running your Sponge server from your home, it is necessary to set up Port Forwarding on your modem or router
-in order for other people to connect.
+如果你正在你的家中运行你的 Sponge 服务端，则需要在你的调制解调器或者路由器中配置端口转发以让其他人进行连接。
 
 .. warning::
 
-    Ensure you take the necessary precautions when port forwarding, because it can be insecure.
+    确保在进行端口转发时采取必要的预防措施，因为它可能会不安全。
 
-Minecraft, and thus Sponge, uses port 25565 by default. Therefore, port 25565 must be port forwarded to the internal
-IP address of your computer. UDP and TCP are the protocols that must be forwarded.
+Minecraft 以及 Sponge 默认使用 25565 端口。所以，必须将 25565 端口转发到你的计算机的内部 IP
+地址上。必须转发 UDP 和 TCP 协议。
 
 .. tip::
 
-    You may change which port is used by editing the appropriate key in your :doc:`configuration/server-properties`.
+    你可以通过编辑你的 :doc:`configuration/server-properties` 文件中适当的键来更改使用的端口。
 
-Port Forwarding can be performed through your router's administrator panel. If you do not know how to navigate to your
-router's administration panel, conduct an internet search for specific instructions on port forwarding for your router.
-The instructions are typically different for every router.
+可以通过你的路由器的管理员面板来执行端口转发。如果你不知道如何切换到你的路由器的管理员面板，进行互联
+网搜索有关你的路由器的端口转发的具体说明。每款路由器的说明通常是不一样的。
 
-If it is preferable to have your server online upon starting up, you may need to port forward your hardware.
+如果更希望让你的服务器启动后就在线，你可能需要进行硬件转发。

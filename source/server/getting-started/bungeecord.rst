@@ -1,63 +1,59 @@
-Using Sponge with BungeeCord
+配合 BungeeCord 使用 Sponge
 ============================
 
-BungeeCord is a piece of server proxy software written by md_5 and the SpigotMC team that allows server owners to link
-Minecraft servers together so that players can jump between servers without having to disconnect and re-connect.
-BungeeCord is typically used by server networks that offer many game modes.
+BungeeCord 是由 md_5 和 SpigotMC 团队编写的一款服务器代理软件，允许服主把 Minecraft
+服务器连接在一起，玩家无需断开重连就能在服务器之间进行切换。BungeeCord
+通常被用在提供有多种游戏模式的服务器网络中。
 
-For more information about BungeeCord, what it is, how to set it up and how it works, have a look at the
-`BungeeCord website <https://www.spigotmc.org/wiki/bungeecord/>`_. This page will focus on Sponge specific steps.
+有关 BungeeCord 是什么、如何设置它以及它是如何运作的更多信息，见
+`BungeeCord 网站 <https://www.spigotmc.org/wiki/bungeecord/>`_。本页面将集中在 Sponge 的具体步骤上。
 
 .. warning::
- In order to connect servers to BungeeCord, you must run the servers in offline mode. In offline mode, without the
- proper precautions, anyone can log into the server using any name they wish, including those who have admin
- permissions. Make sure you protect your servers using firewalls. If you are using linux, there is an IPTables guide
- at `SpigotMC Firewall guide <https://www.spigotmc.org/wiki/firewall-guide/>`_, alternatively, some distributions come
- with `UncomplicatedFirewall "ufw" <https://wiki.ubuntu.com/UncomplicatedFirewall>`_.
+ 为了将服务器连接到 BungeeCord，你必须以离线模式运行服务器。在离线模式下，如果没有适当的预防措
+ 施，任何人都可以使用他们想的任意名字登录到服务器，包括那些有管理权限的名字。确保你在使用防火墙来
+ 保护你的服务器。如果你正在使用
+ Linux，`SpigotMC Firewall guide <https://www.spigotmc.org/wiki/firewall-guide/>`_ 上有一个
+ IPTables 的指南，另外，某些发行版提供有
+ `UncomplicatedFirewall "ufw" <https://wiki.ubuntu.com/UncomplicatedFirewall>`_。
 
-If you are not comfortable with tinkering with Linux, or you are unsure as to how to prevent unauthorised access to
-your servers, consider consulting with someone who has more experience to ensure the security of your server.
+如果你不习惯摆弄
+Linux，或者你不确定如何防止非法访问到你的服务器，可考虑向更有经验的人咨询以确保你的服务器的安全。
 
 .. note::
 
-  Be sure that if you use SSH to make sure port 22 is ALLOWED, otherwise you run a very real risk of locking yourself
-  out of your server!
+  如果你使用 SSH 请确保 22 端口是允许的，否则你真的在冒一个把你自己锁在你的服务器外面的险。
 
-IP Forwarding
+IP 转发
 ~~~~~~~~~~~~~
 
-BungeeCord has a mode called IP Forwarding, which allows BungeeCord to pass the player's UUID and IP address to any
-connected server, even though the servers are being run in offline mode. With current builds of BungeeCord, IP
-Forwarding works with SpongeVanilla, whilst IP Forwarding only supports SpongeForge when vanilla clients connect -
-modded servers that require modded clients cannot natively make use of IP Forwarding with the current version of
-BungeeCord. SpongeForge is only fully supported with the use of a patched version of BungeeCord, or a community
-supplied BungeeCord plugin.
+BungeeCord 有一个叫做 IP 转发的模式，允许 BungeeCord 将玩家的 UUID 和 IP
+地址转发到任意已连接的服务器，甚至是以离线模式运行的服务器。当前 BungeeCord 构建的 IP 转发可与
+SpongeVanilla 工作，同时只在原版客户端连接时支持 SpongeForge —— 当前版本的 BungeeCord
+不能在需要模组客户端的模组服务器下原生使用 IP 转发。使用了修改版的 BungeeCord 或者社区提供的 BungeeCord
+插件才能完全支持 SpongeForge。
 
-A pull request has been supplied to BungeeCord to allow BungeeCord to support SpongeForge natively. We are awaiting it
-to be included in the main product:
+允许 BungeeCord 原生支持 SpongeForge 的拉取请求已经提供给 BungeeCord。我们正在等待它被引入到主产品中：
 
-* Old PR, has context: `BungeeCord PR 1557 <https://github.com/SpigotMC/BungeeCord/pull/1557>`_
-* New PR, uses a different method to avoid breakages: `BungeeCord PR 1678 <https://github.com/SpigotMC/BungeeCord/pull/1678>`_
+* 旧 PR，上下文：`BungeeCord PR 1557 <https://github.com/SpigotMC/BungeeCord/pull/1557>`_
+* 新 PR，为避免破坏使用了不同的方法：`BungeeCord PR 1678 <https://github.com/SpigotMC/BungeeCord/pull/1678>`_
 
-Using BungeeCord without IP Forwarding
+使用没有 IP 转发的 BungeeCord
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-While it is recommended that you use IP Forwarding wherever possible. If you do not wish to do so, simply ensure that
-``online-mode`` is set to ``false`` in your ``server.properties`` file and add the server details to Bungee's
-``config.yml`` file. Bungee will then forward any connections to the server when required. It is a good precaution to
-set the ``server-port`` to something other than ``25565``.
+建议你尽可能地使用 IP 转发。如果你不希望使用，只需确保将你的 ``server.properties`` 文件中的 ``online-mode``
+设置成 ``false`` 并且将服务器详情信息加到 Bungee 的 ``config.yml`` 文件中。在需要时 Bungee
+会将任何的连接转发给服务器。一个好的预防措施是将 ``server-port`` 设置成 ``25565`` 之外的其它端口。
 
-This will work with all implementations of Sponge, including with mods.
+这与所有的 Sponge 实现都能工作，包括有模组的。
 
-Using BungeeCord with IP Forwarding
+使用带有 IP 转发的 BungeeCord
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you wish to use IP Forwarding:
+如果你希望使用 IP 转发：
 
-* In the BungeeCord ``config.yml``, set ``ip_forward`` to ``true``
-* In Sponge's config (config/global.conf), set ``modules.bungeecord`` to ``true`` and ``bungeecord.ip-forwarding`` to
-  ``true``
-* If you have any other server software, consult the documentation for that server.
+* 在 BungeeCord 的 ``config.yml`` 中，将 ``ip_forward`` 设置成 ``true``
+* 在 Sponge 的配置中（config/global.conf），将 ``modules.bungeecord`` 和 ``bungeecord.ip-forwarding`` 设置成 ``true``
+* 如果你有任何其它的服务器软件，请查阅该服务器的文档。
 
-This must be done for **all** servers that are connected to the BungeeCord network. Then, just follow the instructions
-for using BungeeCord without IP Forwarding.
+必须对 **所有** 连接到 BungeeCord 网络的服务器进行该操作。然后，只需按照使用没有
+IP 转发的 BungeeCord 的说明操作即可。
