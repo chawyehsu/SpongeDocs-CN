@@ -1,105 +1,101 @@
 ===============
-Troubleshooting
+故障排查
 ===============
 
-You're probably here because something went wrong with your Sponge server. Let's see if we can figure out what it was,
-and what to do about it.
+你会来到这里可能是因为你的 Sponge 服务器出了某些毛病。让我们看看我们是否能找出病因并对症下药吧。
 
-.. contents:: **Potential Sources of Trouble**
+.. contents:: **可能的故障来源**
    :depth: 2
    :local:
 
 
-Java Is Not Installed On Your Computer
+你的计算机上没有安装 Java
 --------------------------------------
 
-**Solution**: Get Java. Visit the :doc:`../../server/getting-started/jre` for more information.
+**解决方案**: 安装 Java。请查阅 :doc:`../../server/getting-started/jre` 获取更多信息。
 
-Network Connection Failure (or DDoS Attack)
+网络连接失败（或 DDoS 攻击）
 -------------------------------------------
 
-**Symptoms**: Network connection is very laggy, drops in and out, or absent.
+**症状**：网络连接延迟大，丢包，或无法连接。
 
-**Solutions**: Check your connection to the modem or router. See if your browser has similar troubles. You can use
-a free service like speedtest.net to check your connection speed. Other services running on your computer or local
-network may the cause. Make sure that you have enabled Port Forwarding on your router. A DDoS attack, while unlikely,
-will probably completely kill your connectivity, and you should contact your ISP if you believe this to be the case.
+**解决方案**：检查你的调制解调器或路由器的连接。查看你的浏览器是否有相似的问题。可以使用如 speedtest.net
+等免费服务检查你的连接速度。可能是由运行在你的计算机或本地网络中的其它服务造成的。确保你在你的路由器
+上启用了端口转发。DDoS 攻击可能会让你的连接完全瘫痪，虽然这不太可能，但如果你相信是这个导致的，你应该联系你的 ISP。
 
-Not Enough Free Memory
+没有足够的可用内存
 ----------------------
 
-**Symptoms**: Server crashes, often accompanied with "Out of Memory" messages.
+**症状**：服务器崩溃，往往伴随着 ``内存不足`` 的消息。
 
-**Solutions**: Expand the maximum Perm memory size with the startup argument ``-XX:MaxPermSize=128``. Expand your
-server heap memory (if possible) with startup arguments eg. ``-Xms1024M`` (1GB starting memory) and ``-Xmx2048M``
-(2GB maximum). Monitor your free memory on the computer and see if there is some locked up in other processes.
-You may need to kill frozen java processes, or restart your machine. Memory leaks sometimes occur with bugs in
-plugins, which can take time to isolate.
+**解决方案**：使用 ``-XX:MaxPermSize=128`` 启动参数扩大非堆内存的最大尺寸。（如果可行）使用启动参数如
+``-Xms1024M`` （1GB 启动内存）和 ``-Xmx2048M``
+（最大 2GB）扩大你的服务器的堆内存。监控你的计算机上的可用内存并查看是否有其它进程被锁。你可能需要杀掉冻结的
+java 进程，或者重启你的机器。插件的 BUG 有时候会造成内存泄漏，这需要花些时间进行隔离。
 
-**Still an issue?**: If you are still having issues despite the above and cannot increase the Heap Size, check in
-your Task Manager to see if you are using all available Memory. If you are, the only solution is to add more RAM
-to your system. If there is still plenty of memory available, you are running 32-bit Java. If you are using 32-bit
-Java, we recommend an upgrade to 64-bit Java, provided that your Operating System is also 64-bit.
+**仍然有问题？**：尽管尝试了上述情况但还是有问题而又不能增加堆内存，可检查你的任务管理器看看你是否用光了
+所有的可用内存。如果是，那唯一的解决方案是给你的系统增加内存。如果还有大量的可用内存，那就是你正在使用 32 位的
+Java。如果你正在使用 32 位的 Java，你的操作系统是 64 位的，我们建议升级到 64 位的 Java。
 
-Malformed Config File (eg. Bad Editing)
+配置文件格式不正确（例如：拼写错误）
 ---------------------------------------
 
-**Symptom**: One (or more) plugins refuse to load, or behave in unexpected ways. The server log files will contain
-messages about unreadable files on startup. The server may crash, and data may be corrupted.
+**症状**：一个（或多个）插件拒绝载入，或者以非预期方式运行。服务器日志文件会包含有关在启动时无法读取的文
+件的消息。服务器可能崩溃，以及数据可能损坏了。
 
-**Solution**: Stop the server, and check your edited files. Load backup files of any corrupted data. You may need to
-delete a config file entirely and allow it to regenerate upon server startup.
+**解决方案**：关闭服务器，并检查你编辑过的文件。加载损坏数据的备份文件。你可能需要完全删除配置文件并让它
+在服务器启动时重新生成。
 
-A Plugin (or Mod) Has Malfunctioned
+插件（或模组）出现故障
 -----------------------------------
 
-**Symptom**: This could be almost anything - whatever your plugins do, plus the X-factor. Commonly the server crashes
-with a train of error messages in the server log files.
+**症状**：这可能会发生任何情况——取决于你使用的插件，还可能有未知的因素。通常在服务器崩溃时服务器日志文
+件中会带有一长串的错误消息。
 
-**Solution**: Stop the server, and check to see nothing has been corrupted. Be sure to check that it isn't from an
+**解决方案**：Stop the server, and check to see nothing has been corrupted. Be sure to check that it isn't from an
 incorrectly edited config file (above). Remove suspect plugins and add them again one by one, restarting the server
 each time. The problem may originate from one plugin that is out of date - check for updates. Plugin conflict may also
 be the cause, having two incompatible plugins.
 
-Operating System Unstable (eg. Virus Infection)
+操作系统不稳定（如感染病毒）
 --------------------------------------------------
 
-**Symptom**: The server keeps crashing or timing out, and other parts of your operating system are also having problems.
+**症状**：The server keeps crashing or timing out, and other parts of your operating system are also having problems.
 
-**Solution**: Stop everything. Thoroughly check your system and storage devices for malware and viruses. Good tools
+**解决方案**：Stop everything. Thoroughly check your system and storage devices for malware and viruses. Good tools
 for this include AdwCleaner, Junkware Removal Tool, MalwareBytes, and most antivirus ware. Check your server files
 for corruption after a clean restart of your system. Examine the hardware for damage too if the problems persist - eg. a
 faulty power supply.
 
-Corrupted Data
+数据损坏
 --------------
 
-**Symptom**: World files fail to load or cause server to crash when players enter certain chunks. Database corruption.
+**症状**：World files fail to load or cause server to crash when players enter certain chunks. Database corruption.
 
-**Solution**: Load backup files of corrupted data. Software for repairing damaged worlds is available, and missing
+**解决方案**：Load backup files of corrupted data. Software for repairing damaged worlds is available, and missing
 regions may be regenerated. Investigate the cause of corruption - was it a malformed plugin, database driver, power
 failure or something else? Always make sure you make regular backups of important data onto a secure device.
 
-Problem Between Keyboard and Chair
+椅子到键盘之间的问题
 ----------------------------------
 
-**Symptom**: Everything was working fine yesterday. It went strange today after I did XYZ ...
+**症状**：昨天一切都工作得好好的。今天在我做了 ... 之后就变得奇怪了。
 
-**Solution**: SpongeDocs is not large enough to encompass the things people may do that will cause software to fail
+**解决方案**：SpongeDocs is not large enough to encompass the things people may do that will cause software to fail
 in unpredictable ways. It is always worth thinking long and hard about what you may have done recently that could
 have affected the smooth running of your server. A memory card may be loose after dusting, a shortcut may be broken...
 
-There is a Bug in Sponge
+Sponge 有 BUG
 ------------------------
 
-**Symptom**: None of the above apply, and it still doesn't work as it should.
+**症状**：None of the above apply, and it still doesn't work as it should.
 
-**Solution**: Time to get out the big guns. File a report on the
+**解决方案**：Time to get out the big guns. File a report on the
 `SpongeForge <https://github.com/spongepowered/SpongeForge/issues>`_ or
 `SpongeVanilla <https://github.com/spongepowered/SpongeVanilla/issues>`_ issue tracker, remembering to include details
 of the version of Forge and Sponge you are using, and a link to the relevant server log file.
 
-There is Something Wrong With the Universe
+宇宙中出现了某些错误
 ------------------------------------------
 
-We can't help you with this one. You're on your own.
+这个我们帮不了你。你只能靠你自己咯。
